@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "explicit-supersession",
+  "vendor": "ElmCircuit",
+  "as_of": "2026-07-23",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h03-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "ElmCircuit",
+      "title": "ElmCircuit c-proc review INVENTED_H03_PROCUREMENT",
+      "body": "Invented agreement for ElmCircuit. INVENTED_H03_PROCUREMENT\nOnboarding lead time: 5 business days.\nPriority support response: 6 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h03-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "ElmCircuit",
+      "title": "ElmCircuit b-public review ",
+      "body": "Authored pilot summary for ElmCircuit.\nOnboarding lead time: 5 business days.\nPriority support response: 6 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h03-employees"
+    },
+    {
+      "object_id": "h03-a-public",
+      "connector": "docshub",
+      "revision": 2,
+      "subject": "ElmCircuit",
+      "title": "ElmCircuit a-public review ",
+      "body": "Fictional ElmCircuit review note 1.\nHosting region: US.\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h03-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "ElmCircuit",
+      "title": "ElmCircuit e-sec review INVENTED_H03_SECURITY",
+      "body": "ElmCircuit assurance note. INVENTED_H03_SECURITY\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h03-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "ElmCircuit",
+      "title": "ElmCircuit d-proc review INVENTED_H03_PROCUREMENT",
+      "body": "ElmCircuit operations confirmation. INVENTED_H03_PROCUREMENT\nOnboarding lead time: 5 business days.\nPriority support response: 6 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h03-procurement"
+    }
+  ]
+}

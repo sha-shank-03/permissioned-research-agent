@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "expired-only",
+  "vendor": "AlderAtlas",
+  "as_of": "2026-06-19",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h04-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "AlderAtlas",
+      "title": "AlderAtlas e-sec review INVENTED_H04_SECURITY",
+      "body": "AlderAtlas assurance note. INVENTED_H04_SECURITY\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-01-01",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h04-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "AlderAtlas",
+      "title": "AlderAtlas a-public review ",
+      "body": "Fictional AlderAtlas review note 1.\nHosting region: EU.\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-01-01",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h04-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "AlderAtlas",
+      "title": "AlderAtlas b-public review ",
+      "body": "Authored pilot summary for AlderAtlas.\nOnboarding lead time: 18 business days.\nPriority support response: 11 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-01-01",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h04-employees"
+    },
+    {
+      "object_id": "h04-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "AlderAtlas",
+      "title": "AlderAtlas c-proc review INVENTED_H04_PROCUREMENT",
+      "body": "Invented agreement for AlderAtlas. INVENTED_H04_PROCUREMENT\nOnboarding lead time: 18 business days.\nPriority support response: 11 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-01-01",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h04-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "AlderAtlas",
+      "title": "AlderAtlas d-proc review INVENTED_H04_PROCUREMENT",
+      "body": "AlderAtlas operations confirmation. INVENTED_H04_PROCUREMENT\nOnboarding lead time: 18 business days.\nPriority support response: 11 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-01-01",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h04-procurement"
+    }
+  ]
+}

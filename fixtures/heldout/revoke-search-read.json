@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "revoke-search-read",
+  "vendor": "HazelHarbor",
+  "as_of": "2026-03-12",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h07-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "HazelHarbor",
+      "title": "HazelHarbor b-public review ",
+      "body": "Authored pilot summary for HazelHarbor.\nOnboarding lead time: 21 business days.\nPriority support response: 7 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h07-employees"
+    },
+    {
+      "object_id": "h07-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "HazelHarbor",
+      "title": "HazelHarbor a-public review ",
+      "body": "Fictional HazelHarbor review note 1.\nHosting region: US.\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h07-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "HazelHarbor",
+      "title": "HazelHarbor e-sec review INVENTED_H07_SECURITY",
+      "body": "HazelHarbor assurance note. INVENTED_H07_SECURITY\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h07-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "HazelHarbor",
+      "title": "HazelHarbor d-proc review INVENTED_H07_PROCUREMENT",
+      "body": "HazelHarbor operations confirmation. INVENTED_H07_PROCUREMENT\nOnboarding lead time: 31 business days.\nPriority support response: 17 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h07-procurement"
+    },
+    {
+      "object_id": "h07-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "HazelHarbor",
+      "title": "HazelHarbor c-proc review INVENTED_H07_PROCUREMENT",
+      "body": "Invented agreement for HazelHarbor. INVENTED_H07_PROCUREMENT\nOnboarding lead time: 31 business days.\nPriority support response: 17 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "missing-topic",
+  "vendor": "WillowWorks",
+  "as_of": "2026-05-21",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h05-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "WillowWorks",
+      "title": "WillowWorks e-sec review INVENTED_H05_SECURITY",
+      "body": "WillowWorks assurance note. INVENTED_H05_SECURITY\n\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h05-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "WillowWorks",
+      "title": "WillowWorks d-proc review INVENTED_H05_PROCUREMENT",
+      "body": "WillowWorks operations confirmation. INVENTED_H05_PROCUREMENT\nPriority support response: 14 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h05-procurement"
+    },
+    {
+      "object_id": "h05-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "WillowWorks",
+      "title": "WillowWorks c-proc review INVENTED_H05_PROCUREMENT",
+      "body": "Invented agreement for WillowWorks. INVENTED_H05_PROCUREMENT\nPriority support response: 14 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h05-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "WillowWorks",
+      "title": "WillowWorks b-public review ",
+      "body": "Authored pilot summary for WillowWorks.\nOnboarding lead time: 16 business days.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h05-employees"
+    },
+    {
+      "object_id": "h05-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "WillowWorks",
+      "title": "WillowWorks a-public review ",
+      "body": "Fictional WillowWorks review note 1.\nHosting region: IN.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    }
+  ]
+}

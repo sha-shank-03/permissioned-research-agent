@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "split": "dev",
+  "authored": true,
+  "actor_accessible": false,
+  "cases": [
+    {
+      "id": "vendor-review-alex",
+      "scenario": "vendor-review",
+      "principal": "alex",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "vendor-review-priya",
+      "scenario": "vendor-review",
+      "principal": "priya",
+      "expected_outcome": "ready_for_review",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-contract",
+        "cedar-procurement-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "supported",
+          "values": [
+            10
+          ]
+        },
+        "support_hours": {
+          "state": "supported",
+          "values": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "vendor-review-sam",
+      "scenario": "vendor-review",
+      "principal": "sam",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-security"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "conflicting-review-alex",
+      "scenario": "conflicting-review",
+      "principal": "alex",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "conflicting-review-priya",
+      "scenario": "conflicting-review",
+      "principal": "priya",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-contract",
+        "cedar-procurement-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "supported",
+          "values": [
+            10
+          ]
+        },
+        "support_hours": {
+          "state": "conflict",
+          "values": [
+            4,
+            8
+          ]
+        }
+      }
+    },
+    {
+      "id": "conflicting-review-sam",
+      "scenario": "conflicting-review",
+      "principal": "sam",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-security"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "supported",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "stale-review-alex",
+      "scenario": "stale-review",
+      "principal": "alex",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "stale_only",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "stale_only",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "stale-review-priya",
+      "scenario": "stale-review",
+      "principal": "priya",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-contract",
+        "cedar-procurement-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "stale_only",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "stale_only",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "stale_only",
+          "values": [
+            10
+          ]
+        },
+        "support_hours": {
+          "state": "stale_only",
+          "values": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "stale-review-sam",
+      "scenario": "stale-review",
+      "principal": "sam",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-security"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "stale_only",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "stale_only",
+          "values": [
+            true
+          ]
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "missing-review-alex",
+      "scenario": "missing-review",
+      "principal": "alex",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "unknown",
+          "values": []
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "missing-review-priya",
+      "scenario": "missing-review",
+      "principal": "priya",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-contract",
+        "cedar-procurement-message"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "unknown",
+          "values": []
+        },
+        "onboarding_days": {
+          "state": "supported",
+          "values": [
+            10
+          ]
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "missing-review-sam",
+      "scenario": "missing-review",
+      "principal": "sam",
+      "expected_outcome": "needs_follow_up",
+      "allowed_sources": [
+        "cedar-general",
+        "cedar-general-message",
+        "cedar-security"
+      ],
+      "topics": {
+        "hosting_region": {
+          "state": "supported",
+          "values": [
+            "EU"
+          ]
+        },
+        "sso": {
+          "state": "unknown",
+          "values": []
+        },
+        "onboarding_days": {
+          "state": "unknown",
+          "values": []
+        },
+        "support_hours": {
+          "state": "unknown",
+          "values": []
+        }
+      }
+    }
+  ]
+}

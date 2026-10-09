@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "clean-corroboration",
+  "vendor": "MapleHarbor",
+  "as_of": "2026-08-14",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h01-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "MapleHarbor",
+      "title": "MapleHarbor a-public review ",
+      "body": "Fictional MapleHarbor review note 1.\nHosting region: IN.\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h01-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "MapleHarbor",
+      "title": "MapleHarbor e-sec review INVENTED_H01_SECURITY",
+      "body": "MapleHarbor assurance note. INVENTED_H01_SECURITY\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h01-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "MapleHarbor",
+      "title": "MapleHarbor d-proc review INVENTED_H01_PROCUREMENT",
+      "body": "MapleHarbor operations confirmation. INVENTED_H01_PROCUREMENT\nOnboarding lead time: 7 business days.\nPriority support response: 3 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h01-procurement"
+    },
+    {
+      "object_id": "h01-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "MapleHarbor",
+      "title": "MapleHarbor c-proc review INVENTED_H01_PROCUREMENT",
+      "body": "Invented agreement for MapleHarbor. INVENTED_H01_PROCUREMENT\nOnboarding lead time: 7 business days.\nPriority support response: 3 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h01-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "MapleHarbor",
+      "title": "MapleHarbor b-public review ",
+      "body": "Authored pilot summary for MapleHarbor.\nOnboarding lead time: 7 business days.\nPriority support response: 3 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h01-employees"
+    }
+  ]
+}

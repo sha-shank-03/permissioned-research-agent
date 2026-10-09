@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "peer-conflict",
+  "vendor": "BirchBeacon",
+  "as_of": "2026-09-17",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h02-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "BirchBeacon",
+      "title": "BirchBeacon c-proc review INVENTED_H02_PROCUREMENT",
+      "body": "Invented agreement for BirchBeacon. INVENTED_H02_PROCUREMENT\nOnboarding lead time: 13 business days.\nPriority support response: 2 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h02-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "BirchBeacon",
+      "title": "BirchBeacon d-proc review INVENTED_H02_PROCUREMENT",
+      "body": "BirchBeacon operations confirmation. INVENTED_H02_PROCUREMENT\nOnboarding lead time: 13 business days.\nPriority support response: 2 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h02-procurement"
+    },
+    {
+      "object_id": "h02-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "BirchBeacon",
+      "title": "BirchBeacon e-sec review INVENTED_H02_SECURITY",
+      "body": "BirchBeacon assurance note. INVENTED_H02_SECURITY\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h02-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "BirchBeacon",
+      "title": "BirchBeacon a-public review ",
+      "body": "Fictional BirchBeacon review note 1.\nHosting region: US.\nSSO support: yes.\nPriority support response: 2 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h02-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "BirchBeacon",
+      "title": "BirchBeacon b-public review ",
+      "body": "Authored pilot summary for BirchBeacon.\nOnboarding lead time: 13 business days.\nPriority support response: 9 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h02-employees"
+    }
+  ]
+}

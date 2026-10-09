@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "version-replacement",
+  "vendor": "RowanRelay",
+  "as_of": "2026-01-15",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h09-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "RowanRelay",
+      "title": "RowanRelay d-proc review INVENTED_H09_PROCUREMENT",
+      "body": "RowanRelay operations confirmation. INVENTED_H09_PROCUREMENT\nOnboarding lead time: 11 business days.\nPriority support response: 10 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h09-procurement"
+    },
+    {
+      "object_id": "h09-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "RowanRelay",
+      "title": "RowanRelay c-proc review INVENTED_H09_PROCUREMENT",
+      "body": "Invented agreement for RowanRelay. INVENTED_H09_PROCUREMENT\nOnboarding lead time: 11 business days.\nPriority support response: 10 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h09-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "RowanRelay",
+      "title": "RowanRelay b-public review ",
+      "body": "Authored pilot summary for RowanRelay.\nOnboarding lead time: 11 business days.\nPriority support response: 10 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h09-employees"
+    },
+    {
+      "object_id": "h09-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "RowanRelay",
+      "title": "RowanRelay a-public review ",
+      "body": "Fictional RowanRelay review note 1.\nHosting region: EU.\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h09-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "RowanRelay",
+      "title": "RowanRelay e-sec review INVENTED_H09_SECURITY",
+      "body": "RowanRelay assurance note. INVENTED_H09_SECURITY\nSSO support: yes.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    }
+  ]
+}

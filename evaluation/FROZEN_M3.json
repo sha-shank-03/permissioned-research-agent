@@ -1,0 +1,128 @@
+{
+  "freeze_id": "m3-source-candidate-3",
+  "created_at": "2026-10-08T13:25:46.569445+00:00",
+  "authorship": "actor-held-out; same author; not blind",
+  "accepted_actor_freeze_id": "m2-source-candidate-3",
+  "accepted_actor_manifest_sha256": "319836808f265ca4a79b6113435c028249bc84f9433f54d8cccaf14f3ab44a49",
+  "accepted_baseline_manifest_sha256": "edc314feb803caf0f13695b5b6d7b1286412e8aea5850d81ada9e6261e0a0a56",
+  "accepted_actor_freeze_file_sha256": "fbfc21d0353217953ae9341ac653712f86ecd62f7cd34e7018b0c087785b59c1",
+  "rubrics": {
+    "manifest_sha256": "de0ac1ee3c2bbc4b9d6320269fc728374ad634f61230eef1c0becae2d4be77fa",
+    "files": [
+      {
+        "path": "docs/m3-rubrics.md",
+        "sha256": "de941712668d58d2fd82b4ebbd3b94a9baf8076ad32cda01d2052a9c014fdd6f"
+      },
+      {
+        "path": "evaluation/labels/heldout.json",
+        "sha256": "641990a4451660a0fd18e1afb06ed9b1b68fcbd2e09f6973c3fe960f59ea6b60"
+      },
+      {
+        "path": "fixtures/heldout/clean-corroboration.json",
+        "sha256": "7e508a9bfa534dba9e2b2501c2460b48d5b2f420e3bbca37d41aaddc5546329d"
+      },
+      {
+        "path": "fixtures/heldout/denied-resolution.json",
+        "sha256": "ad8c06c229db9ea53333d0045b388e3b06658613c2136ab722a5591e8b954da7"
+      },
+      {
+        "path": "fixtures/heldout/expired-only.json",
+        "sha256": "c315b477c6216a61eb31476ca83bac59aac7c2b6f15960bbc4d0fa32313da135"
+      },
+      {
+        "path": "fixtures/heldout/explicit-supersession.json",
+        "sha256": "0cc498c1150524a13ee25b16eb19da3ccbb585b3876d218325dab3cf20d5c904"
+      },
+      {
+        "path": "fixtures/heldout/injection-cache.json",
+        "sha256": "f9e9844f7d84e56f2f4d931007e2b406a8851ac2f9f145cbf8677ee2f60e2261"
+      },
+      {
+        "path": "fixtures/heldout/missing-topic.json",
+        "sha256": "61909d76fcaca52de0a0371d1d4a02fc75e85e200caa744cc47e24442c76ddf3"
+      },
+      {
+        "path": "fixtures/heldout/peer-conflict.json",
+        "sha256": "3e14ad5f5cf483a7e8d93450015c936ce500ff00fe7dac105edccb633b0799c3"
+      },
+      {
+        "path": "fixtures/heldout/revoke-inference-release.json",
+        "sha256": "ccb8a4b455aa0ccb2798832aae6a826165c6b2c7353c5ed077ed2bd330762cd5"
+      },
+      {
+        "path": "fixtures/heldout/revoke-search-read.json",
+        "sha256": "4352d112d591b8c8d0b302e3227bc5447f66f7b16cf13b2fc679aeaa9d4ea81b"
+      },
+      {
+        "path": "fixtures/heldout/version-replacement.json",
+        "sha256": "10de04529a3bb514e65769a9c2a3edccc17743eb0af7ea6d58a196e65c49aab2"
+      }
+    ]
+  },
+  "evaluation_source": {
+    "manifest_sha256": "b9fba8e7b86ae77076d840c54d6b137da66fddd00c77f8a0315e8e937353a5ad",
+    "files": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha256": "d2dd1ecbe84b6a2a297e4259e6d65a8d636fa82ec633697b08fda18a36f65948"
+      },
+      {
+        "path": "evaluation/controls.py",
+        "sha256": "f180f98bdd60bced28be44623ba4a4eb4bd2f0243eb36452e03a490efbbf5299"
+      },
+      {
+        "path": "evaluation/evaluate.py",
+        "sha256": "e973923177ddacfc66a11ec2c10f513002b5892dce9fd7e2577d7b06b503a9fb"
+      },
+      {
+        "path": "evaluation/heldout.py",
+        "sha256": "60223814c01fbbd5f0d6bfdc1ffc4f7ca998663901177dbc72df9871358fe24f"
+      },
+      {
+        "path": "evaluation/ledger.py",
+        "sha256": "438b25bff9f5271ee324661141bd53e0d27128a85b449639298f9c61b4d4e823"
+      },
+      {
+        "path": "evaluation/oracle.py",
+        "sha256": "4f34dc358a4523dd08b6bee4cd77d56c8506a73c8d81cc081c038266a6ac8647"
+      },
+      {
+        "path": "evaluation/release_check.py",
+        "sha256": "b92ce089f845ae2873ec26f1e87572de96eec0c48ad3a8b775d1f3e71e0dec92"
+      },
+      {
+        "path": "evaluation/suite.py",
+        "sha256": "002c9ff7064f3e57d654310336576d1247a80c81bbc271010e223da9a688272b"
+      },
+      {
+        "path": "tests/test_m3_reporting_units.py",
+        "sha256": "6ff2bbcae4872a5f8f5c5c10c079b0143b4ba2f7f8d7c0715713e2192371bb27"
+      },
+      {
+        "path": "tests/test_m3_units.py",
+        "sha256": "0d1d32db0c9209ec1b3f9a83c42dfee43c144aff9074869a894dac7e20675aa6"
+      }
+    ]
+  },
+  "authored_cases": 30,
+  "initial_sources": 50,
+  "distinct_versions": 52,
+  "heldout_scoring_executed_at_freeze": false,
+  "main_rubric_review_at_freeze": "all 30 accepted as written before first score",
+  "integration_at_freeze": "unexecuted",
+  "previous_candidate": {
+    "path": "evaluation/freezes/m3-source-candidate-2.json",
+    "file_sha256": "6bb5f33ad9025e545caebb36d388c99194acb8d9577210ca828a9a5f12090b1a",
+    "source_manifest_sha256": "8bc85b345faea41eb3006616092aeff0a33ae83ce43d3857af7c40542f959271",
+    "source_archive": "Worker M3_CANDIDATE2_SOURCE_ARCHIVE, 66 hash-verified shipping files, preserved before correction"
+  },
+  "change_rationale": "Bounded evaluator correction for main source review: common permission/disclosure/probe authority gate for every policy; durable new-output planned manifest and incremental metrics-only attempt ledger; failure preserves prefix/identity/type and planned denominators, returns nonzero; existing evidence never overwritten. Add pure injected controls and related docs. Accepted actor/baseline and all 30 rubric/label/fixture bytes unchanged. Zero task scoring or validation-set tuning.",
+  "change_policy": "Archive this candidate and its input/source bytes with a specific rationale before any correction. After first scoring disclose validation-set tuning; never weaken labels to improve a score.",
+  "self_hash_exclusion": "This manifest and its identical archive are excluded from their own component hashes; worker source checkpoint hashes both externally.",
+  "main_rubric_review": {
+    "checked_at": "2026-10-08T13:09:01.092598+00:00",
+    "main_conditions": 370,
+    "receipt": "coordination/acceptance/permissioned-research-agent/20261008T1303-source-review.json",
+    "rubric_manifest_sha256": "de0ac1ee3c2bbc4b9d6320269fc728374ad634f61230eef1c0becae2d4be77fa"
+  }
+}

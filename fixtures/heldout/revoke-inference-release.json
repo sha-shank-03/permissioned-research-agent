@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "revoke-inference-release",
+  "vendor": "CypressCloud",
+  "as_of": "2026-02-18",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h08-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "CypressCloud",
+      "title": "CypressCloud d-proc review INVENTED_H08_PROCUREMENT",
+      "body": "CypressCloud operations confirmation. INVENTED_H08_PROCUREMENT\nOnboarding lead time: 31 business days.\nPriority support response: 17 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h08-procurement"
+    },
+    {
+      "object_id": "h08-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "CypressCloud",
+      "title": "CypressCloud e-sec review INVENTED_H08_SECURITY",
+      "body": "CypressCloud assurance note. INVENTED_H08_SECURITY\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h08-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "CypressCloud",
+      "title": "CypressCloud a-public review ",
+      "body": "Fictional CypressCloud review note 1.\nHosting region: IN.\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    },
+    {
+      "object_id": "h08-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "CypressCloud",
+      "title": "CypressCloud b-public review ",
+      "body": "Authored pilot summary for CypressCloud.\nOnboarding lead time: 9 business days.\nPriority support response: 5 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h08-employees"
+    },
+    {
+      "object_id": "h08-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "CypressCloud",
+      "title": "CypressCloud c-proc review INVENTED_H08_PROCUREMENT",
+      "body": "Invented agreement for CypressCloud. INVENTED_H08_PROCUREMENT\nOnboarding lead time: 31 business days.\nPriority support response: 17 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    }
+  ]
+}

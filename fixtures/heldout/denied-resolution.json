@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "scenario": "denied-resolution",
+  "vendor": "JuniperGate",
+  "as_of": "2026-04-16",
+  "principals": {
+    "alex": [
+      "employees"
+    ],
+    "priya": [
+      "employees",
+      "procurement"
+    ],
+    "sam": [
+      "employees",
+      "security"
+    ]
+  },
+  "sources": [
+    {
+      "object_id": "h06-b-public",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "JuniperGate",
+      "title": "JuniperGate b-public review ",
+      "body": "Authored pilot summary for JuniperGate.\nPriority support response: 8 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ],
+      "channel": "h06-employees"
+    },
+    {
+      "object_id": "h06-c-proc",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "JuniperGate",
+      "title": "JuniperGate c-proc review INVENTED_H06_PROCUREMENT",
+      "body": "Invented agreement for JuniperGate. INVENTED_H06_PROCUREMENT\nOnboarding lead time: 12 business days.\nPriority support response: 4 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ]
+    },
+    {
+      "object_id": "h06-d-proc",
+      "connector": "teamchat",
+      "revision": 1,
+      "subject": "JuniperGate",
+      "title": "JuniperGate d-proc review INVENTED_H06_PROCUREMENT",
+      "body": "JuniperGate operations confirmation. INVENTED_H06_PROCUREMENT\nOnboarding lead time: 12 business days.\nPriority support response: 4 hours.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "procurement"
+      ],
+      "channel": "h06-procurement"
+    },
+    {
+      "object_id": "h06-e-sec",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "JuniperGate",
+      "title": "JuniperGate e-sec review INVENTED_H06_SECURITY",
+      "body": "JuniperGate assurance note. INVENTED_H06_SECURITY\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "security"
+      ]
+    },
+    {
+      "object_id": "h06-a-public",
+      "connector": "docshub",
+      "revision": 1,
+      "subject": "JuniperGate",
+      "title": "JuniperGate a-public review ",
+      "body": "Fictional JuniperGate review note 1.\nHosting region: EU.\nSSO support: no.\n",
+      "effective_at": "2025-12-01",
+      "review_until": "2026-12-31",
+      "allow_groups": [
+        "employees"
+      ]
+    }
+  ]
+}

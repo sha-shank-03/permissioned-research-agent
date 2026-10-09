@@ -1,0 +1,89 @@
+{
+  "freeze_id": "m2-source-candidate-1",
+  "created_at": "2026-10-08T10:20:15.734782+00:00",
+  "protocol": "research-action-v1",
+  "policy_version": "permissioned-research-m2-v1",
+  "integration_verified": false,
+  "heldout_scoring_executed": false,
+  "actor": {
+    "manifest_sha256": "a58cedc1b61e995d6fbf29ef42a754bea85cdd8091fb9ae60974ef193d18b57f",
+    "files": [
+      {
+        "path": "permissioned_research/__init__.py",
+        "sha256": "33a8057b2cb9d96640ca6c47ad323d769f4cd11681575ef17a273e97c680eed7"
+      },
+      {
+        "path": "permissioned_research/__main__.py",
+        "sha256": "5c8ffc0f5e0ca213d84355403ee867f8d8c74533ea34ef18eb62c1766ac34a6b"
+      },
+      {
+        "path": "permissioned_research/agent.py",
+        "sha256": "18fa0da281feff17f1ad5e89755457d4908ecf98f06e3dee5d2ad8dd74356927"
+      },
+      {
+        "path": "permissioned_research/cache.py",
+        "sha256": "f141f42fabf659925660d46c2dbeed8c9fd6b4313376fd630528361f964ccf35"
+      },
+      {
+        "path": "permissioned_research/connectors.py",
+        "sha256": "377ed031ed4a42d467549b0ab1438de20593cdb3835d8dceec677e14d59c4888"
+      },
+      {
+        "path": "permissioned_research/domain.py",
+        "sha256": "1d8f3409c23c978366f0adff6d41d4a2d3f680a012971e37d01f8b9bf8d35dcf"
+      },
+      {
+        "path": "permissioned_research/guard.py",
+        "sha256": "6e67245048fa286029de6cb2c1c3ac848e75e660efbd20f15b8ffd3b5acd1413"
+      },
+      {
+        "path": "permissioned_research/providers.py",
+        "sha256": "19eaa7f020ac77f4c6317cded02456d8c2367799bce134c659c605d98d01dbac"
+      },
+      {
+        "path": "permissioned_research/render.py",
+        "sha256": "edc9644209cf1421e366f06bffac44c8a728bb9af2ee6e71cd4863e382e2bc2a"
+      },
+      {
+        "path": "permissioned_research/store.py",
+        "sha256": "979fcd5c28e4fbd316154a9842c927efbfef67d49159fb0308e7f30f196d8148"
+      },
+      {
+        "path": "permissioned_research/transport.py",
+        "sha256": "2cd79f317751a58f31c3461bfa8cf0896c067567ce126fc30f3c0dcd05afcac6"
+      }
+    ]
+  },
+  "scripted_policy_sha256": "19eaa7f020ac77f4c6317cded02456d8c2367799bce134c659c605d98d01dbac",
+  "baseline": {
+    "manifest_sha256": "edc314feb803caf0f13695b5b6d7b1286412e8aea5850d81ada9e6261e0a0a56",
+    "files": [
+      {
+        "path": "evaluation/baseline.py",
+        "sha256": "87223e1c931f0fb7cff2fa62bd49c38af4fa797b4d65a65a82f3ba94e32d40e0"
+      }
+    ]
+  },
+  "development_fixtures": {
+    "manifest_sha256": "53272c3e9fc2bfac9481193b79422e5126beeb768e99e08c14561d092d305c7b",
+    "files": [
+      {
+        "path": "fixtures/dev/conflicting-review.json",
+        "sha256": "7eaca92a2dfb30976382ebb525c9e8273efc3c9e942321dce76d1f2eb8b25180"
+      },
+      {
+        "path": "fixtures/dev/missing-review.json",
+        "sha256": "b7e271f6da820108e2d20e90d9df85d6d339636cedd19d31aa3b7ec802605081"
+      },
+      {
+        "path": "fixtures/dev/stale-review.json",
+        "sha256": "c8c08a1b08ae6c4d57783d9f2b9cffa8b5d5b141a73a52ae545e1b69d0e3bf87"
+      },
+      {
+        "path": "fixtures/dev/vendor-review.json",
+        "sha256": "b162ea9a7dcd583a333c1fd94d612940f1ffc9ac129fdf55cadf1a9de612feda"
+      }
+    ]
+  },
+  "change_policy": "Any actor/policy/baseline change requires a new freeze before held-out scoring. This candidate is not integration accepted."
+}
