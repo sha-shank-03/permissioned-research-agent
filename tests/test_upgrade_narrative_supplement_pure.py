@@ -1,0 +1,374 @@
+"""Pure file/journal/controller tests. All actors injected; no native/SQL/socket."""
+import copy
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+from evaluation.upgrade.narrative_suite.data import SuiteError, digest
+from evaluation.upgrade.narrative_suite.ledger import METRICS
+from evaluation.upgrade.narrative_supplement.contract import Context, CORRECTION, LIMITS, OUTPUT, PARENT, PROPOSAL, ROOT, SEAL, file_hash, read_json
+from evaluation.upgrade.narrative_supplement.journal import ARTIFACTS, Journal, validate_plan, write_exclusive
+from evaluation.upgrade.narrative_supplement.report import reconcile
+from evaluation.upgrade.narrative_supplement.runner import prepare, run
+from evaluation.upgrade.public_contract_fixtures_v5 import build_contract_root, POPULATION
+
+PROPOSAL_VALUE=read_json(ROOT/PROPOSAL)
+CHECKPOINT=read_json(ROOT/'fixtures/upgrade/narrative-correction-v2/parent-checkpoint.json',512*1024)
+
+
+def blueprint():
+    return {'schema':'narrative-supplement-plan-v3','execution_source_manifest_sha256':'a'*64,
+        'execution_code_sha256':'b'*64,'actor_source_manifest_sha256':PROPOSAL_VALUE['bindings']['actor_source_manifest_sha256'],
+        'correction_source_manifest_sha256':file_hash(ROOT/CORRECTION),'proposal_file_sha256':file_hash(ROOT/PROPOSAL),
+        'proposal_content_sha256':digest(PROPOSAL_VALUE),'parent_bindings':copy.deepcopy(PROPOSAL_VALUE['bindings']),
+        'original_actor_bindings':copy.deepcopy(CHECKPOINT['capability_plan']['bindings']),
+        'attempts':copy.deepcopy(PROPOSAL_VALUE['attempts']),'limits':copy.deepcopy(LIMITS),
+        'parent_relative_root':PARENT,'output_relative_root':OUTPUT,'lease_label':'pure-injected-test',
+        'lease_label_is_not_authorization':True,'hypothesis_version':PROPOSAL_VALUE['version'],
+        'semantic_quality':None,'aggregate_full_plan_safety':None}
+
+
+class FakeContext:
+    def __init__(self,out):
+        self.out=out; self.blueprint=blueprint(); self.execution_sha256='a'*64
+        self.verifications=0; self.fail_on=None; self.bytes=0
+    def verify(self):
+        self.verifications+=1
+        if self.verifications==self.fail_on:raise SuiteError('injected_drift')
+        return True
+    def generated_bytes(self):return self.bytes
+    def load_task(self,entry):
+        from evaluation.upgrade.narrative_suite.data import InputCatalog
+        return InputCatalog(ROOT/'fixtures/upgrade/narrative-v2').load_input(entry['task_id'])
+
+
+def metrics(outcome,error):
+    result={key:None for key in METRICS}
+    result.update(outcome=outcome,error=error,provider_requests=0,searches=0,reads=0,repairs=0,
+        restarts=0,backend_search_calls=0,elapsed_seconds=0.01,owned_processes_remaining=0)
+    return result
+
+
+def raw_actor(task,policy,path,bindings,*,outcome=None,error=None,mutate=None):
+    # Opaque bytes named corpus.sqlite are deliberately NOT a SQLite database.
+    path.mkdir(exist_ok=False)
+    first=task['id']=='capability-budget-03'
+    m=metrics(outcome or ('failed' if first else 'cancelled'),error or ('invalid_decision' if first else 'cancelled'))
+    from permissioned_research.upgrade.config import DispatchConfig, DOUBLE_MODEL
+    report={'schema':'narrative-task-run-v1','task_id':task['id'],'split':task['split'],
+        'family':task['family'],'principal':task['principal'],'policy':policy,'input_sha256':digest(task),
+        'config_sha256':DispatchConfig(DOUBLE_MODEL,**task['execution']['config_overrides']).sha256,
+        'bindings':bindings,'outcome':m['outcome'],'error':m['error'],'counters':{k:m[k] for k in ('searches','reads','repairs','restarts','backend_search_calls')},
+        'provider_requests':0,'elapsed_seconds':0.01,'owned_processes_remaining':0,
+        'live_model_executed':False,'remote_authorization_proven':False,
+        'model_tokens':None,'actual_cost':None,'estimated_cost':None,'semantic_correctness':None,
+        'coverage':None,'semantic_judgments':None,'private_prose':'Bearer private-credential-shaped-test'}
+    trace={'schema':'narrative-private-trace-v1','capture_complete':True,'actor_rubric_contents_loaded':False,
+        'observed_native_requests':0,'responses':[],'disclosures':[],'unpaired_native_records':[],'unpaired_authority_frames':[]}
+    if mutate:mutate(m,report,trace)
+    artifacts={'report_sha256':write_exclusive(path/'report.json',report),
+        'trace_sha256':write_exclusive(path/'trace.json',trace)}
+    (path/'corpus.sqlite').write_bytes(b'opaque pure-test fixture, no SQL')
+    artifacts['corpus_sha256']=file_hash(path/'corpus.sqlite')
+    return m,artifacts
+
+
+class SupplementPureTests(unittest.TestCase):
+    def setUp(self):
+        scratch=ROOT/'work'; scratch.mkdir(exist_ok=True)
+        self.temp=tempfile.TemporaryDirectory(prefix='u2b2-supplement-pure-',dir=scratch)
+        self.base=Path(self.temp.name).resolve()
+        self.assertTrue(self.base.is_relative_to(scratch.resolve()))
+        self.context=FakeContext(self.base/'supplement'); self.calls=[]
+        self.native_guard=patch('evaluation.upgrade.narrative_supplement.runner.native_actor',side_effect=AssertionError('native actor forbidden in pure test'))
+        self.native_guard.start()
+    def tearDown(self):
+        self.native_guard.stop()
+        # Verify the resolved target before TemporaryDirectory recursive cleanup.
+        self.assertTrue(self.base.is_relative_to((ROOT/'work').resolve()))
+        self.temp.cleanup()
+    def actor(self,*args):
+        self.calls.append(args); return raw_actor(*args)
+    def setup_journal(self):return prepare(self.context)
+    def report(self):return reconcile(self.context.out,'a'*64,context=self.context)
+    def assert_refuses_replay(self):
+        before=(self.context.out/'journal.jsonl').read_bytes(); count=len(self.calls)
+        with self.assertRaises(SuiteError):run(self.context,actor=self.actor)
+        self.assertEqual(len(self.calls),count); self.assertEqual((self.context.out/'journal.jsonl').read_bytes(),before)
+    def fail_hook(self,event,phase):
+        called=[]
+        def hook(kind,stage):
+            if kind==event and stage==phase and not called:
+                called.append(True); raise OSError('Bearer private-credential-shaped-test')
+        return hook
+
+    def test_prepare_freezes_all_three_intentions_and_old_new_bindings(self):
+        journal=self.setup_journal(); state=journal.inspect()
+        self.assertEqual([r['event'] for r in state['records']],['INTENDED']*3)
+        self.assertEqual(state['counts'],{'terminal':0,'interrupted_unknown':0,'unexecuted':3})
+        self.assertEqual(journal.plan,self.context.blueprint)
+        self.assertEqual(journal.plan['attempts'],PROPOSAL_VALUE['attempts'])
+        self.assertNotEqual(journal.plan['execution_source_manifest_sha256'],journal.plan['actor_source_manifest_sha256'])
+    def test_prepare_is_exclusive_and_never_overwrites(self):
+        self.setup_journal(); before=(self.context.out/'plan.json').read_bytes()
+        with self.assertRaises(FileExistsError):prepare(self.context)
+        self.assertEqual((self.context.out/'plan.json').read_bytes(),before)
+    def test_three_expected_results_have_75_physical_and_72_logical_slots(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor),0)
+        report=self.report(); self.assertEqual(len(self.calls),3)
+        self.assertEqual(report['physical_intent_records'],75)
+        self.assertEqual(report['physical_terminal_records'],72)
+        self.assertEqual(report['physical_unexecuted_intent_records'],3)
+        self.assertEqual(report['logical_original_slots'],{'intended':72,'terminal':72,'interrupted_unknown':0,'unexecuted':0})
+        self.assertEqual(report['original_cohort']['terminal'],69)
+        self.assertEqual(report['original_cohort']['stopped_exit'],2)
+        self.assertFalse(report['dispatch_authorized']); self.assertIsNone(report['semantic_quality'])
+        self.assertTrue(all(r['raw_evidence_hashes_match'] for r in report['slots']))
+        self.assert_refuses_replay()
+    def test_actor_observes_started_and_all_intentions_before_dispatch(self):
+        self.setup_journal()
+        def actor(task,policy,path,bindings):
+            state=Journal(self.context.out).inspect()
+            self.assertTrue(state['intended_complete'])
+            self.assertEqual(state['slots'][path.name]['state'],'interrupted_unknown')
+            self.assertEqual(bindings,CHECKPOINT['capability_plan']['bindings'])
+            self.assertNotIn('required_relationships',task)
+            self.assertEqual(bindings['source_manifest_sha256'],PROPOSAL_VALUE['bindings']['actor_source_manifest_sha256'])
+            return self.actor(task,policy,path,bindings)
+        self.assertEqual(run(self.context,actor=actor),0)
+    def test_unexpected_terminal_is_durable_before_comparison_and_blocks_later(self):
+        self.setup_journal()
+        def actor(*args):self.calls.append(args); return raw_actor(*args,outcome='failed',error='budget_exhausted')
+        self.assertEqual(run(self.context,actor=actor),2); self.assertEqual(len(self.calls),1)
+        state=Journal(self.context.out).inspect()
+        self.assertEqual(state['slots']['s001']['metrics']['error'],'budget_exhausted')
+        self.assertEqual([r['event'] for r in state['records']][-3:],['RETURNED','TERMINAL','CLASSIFIED'])
+        self.assertFalse(state['slots']['s001']['classified'])
+        before=(self.context.out/'journal.jsonl').read_bytes()
+        for _ in range(2):
+            report=self.report(); self.assertEqual(report['unexpected_terminal_ids'],['s001'])
+            self.assertFalse(report['dispatch_authorized']); self.assertTrue(report['stop_for_main_review'])
+        self.assertEqual((self.context.out/'journal.jsonl').read_bytes(),before)
+        self.assert_refuses_replay()
+    def test_actor_exception_remains_unknown_and_redacted(self):
+        self.setup_journal()
+        def actor(*args):self.calls.append(args); raise RuntimeError('Bearer private-credential-shaped-test')
+        self.assertEqual(run(self.context,actor=actor),2)
+        report=self.report(); self.assertEqual(report['supplement']['interrupted_unknown'],1)
+        self.assertEqual(report['supplement']['unexecuted'],2)
+        self.assertIn('actor_outcome_unknown',report['halt_codes'])
+        self.assertNotIn('private-credential',json.dumps(report))
+        self.assertNotIn('private-credential',(self.context.out/'journal.jsonl').read_text())
+        self.assert_refuses_replay()
+    def test_lost_started_ack_has_no_actor_and_no_replay(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('STARTED','after_fsync')),2)
+        self.assertEqual(self.calls,[]); self.assertEqual(self.report()['supplement']['interrupted_unknown'],1)
+        self.assert_refuses_replay()
+    def test_started_write_failure_preserves_three_unexecuted_intents(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('STARTED','before_write')),2)
+        self.assertEqual(self.calls,[]); self.assertEqual(self.report()['supplement']['unexecuted'],3)
+        self.assert_refuses_replay()
+    def test_lost_returned_ack_preserves_raw_receipt_unknown_denominator(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('RETURNED','after_fsync')),2)
+        self.assertEqual(len(self.calls),1); self.assertTrue((self.context.out/'s001.returned.json').is_file())
+        self.assertEqual(self.report()['supplement']['interrupted_unknown'],1); self.assert_refuses_replay()
+    def test_lost_terminal_ack_retains_terminal_without_classification(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('TERMINAL','after_fsync')),2)
+        report=self.report(); self.assertEqual(report['supplement']['terminal'],1)
+        self.assertIsNone(report['slots'][0]['classification_acknowledged'])
+        self.assertTrue(report['slots'][0]['raw_evidence_hashes_match']); self.assertEqual(len(self.calls),1)
+        self.assert_refuses_replay()
+    def test_terminal_write_failure_keeps_receipts_and_unknown(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('TERMINAL','before_write')),2)
+        self.assertTrue((self.context.out/'s001.usage.json').is_file())
+        self.assertEqual(self.report()['supplement']['interrupted_unknown'],1); self.assert_refuses_replay()
+    def test_lost_classification_ack_stops_even_when_terminal_expected(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor,hook=self.fail_hook('CLASSIFIED','after_fsync')),2)
+        report=self.report(); self.assertEqual(report['supplement']['terminal'],1)
+        self.assertTrue(report['slots'][0]['classification_acknowledged'])
+        self.assertIn('durability_unknown',report['halt_codes']); self.assert_refuses_replay()
+    def test_missing_raw_artifact_preserves_returned_and_unknown(self):
+        self.setup_journal()
+        def actor(*args):
+            result=self.actor(*args); (args[2]/'trace.json').unlink(); return result
+        self.assertEqual(run(self.context,actor=actor),2)
+        self.assertTrue((self.context.out/'s001.returned.json').is_file())
+        self.assertEqual(self.report()['supplement']['interrupted_unknown'],1); self.assert_refuses_replay()
+    def test_incomplete_trace_stops_without_claiming_safe_terminal(self):
+        self.setup_journal()
+        def actor(*args):self.calls.append(args); return raw_actor(*args,mutate=lambda m,r,t:t.update(capture_complete=False))
+        self.assertEqual(run(self.context,actor=actor),2)
+        self.assertEqual(self.report()['supplement']['interrupted_unknown'],1); self.assert_refuses_replay()
+    def test_invalid_returned_metrics_are_private_and_not_terminal(self):
+        self.setup_journal()
+        def actor(*args):return raw_actor(*args,mutate=lambda m,r,t:m.update(error='Bearer private-credential-shaped-test'))
+        self.assertEqual(run(self.context,actor=actor),2)
+        self.assertEqual(self.report()['supplement']['terminal'],0)
+        self.assertNotIn('private-credential',json.dumps(self.report()))
+        self.assertNotIn('private-credential',(self.context.out/'journal.jsonl').read_text())
+    def test_hash_changed_raw_artifact_stops_before_terminal(self):
+        self.setup_journal()
+        def actor(*args):
+            result=self.actor(*args); (args[2]/'corpus.sqlite').write_bytes(b'changed'); return result
+        self.assertEqual(run(self.context,actor=actor),2)
+        self.assertEqual(self.report()['supplement']['interrupted_unknown'],1)
+    def test_post_return_drift_keeps_terminal_and_stops_before_later_dispatch(self):
+        self.setup_journal(); self.context.fail_on=4
+        self.assertEqual(run(self.context,actor=self.actor),2)
+        report=self.report(); self.assertEqual(report['supplement']['terminal'],1)
+        self.assertIsNone(report['slots'][0]['classification_acknowledged'])
+        self.assertIn('preflight_drift',report['halt_codes']); self.assertEqual(len(self.calls),1)
+        self.assert_refuses_replay()
+    def test_pre_dispatch_drift_preserves_all_unexecuted_and_no_actor(self):
+        self.setup_journal(); self.context.fail_on=3
+        self.assertEqual(run(self.context,actor=self.actor),2)
+        self.assertEqual(self.report()['supplement']['unexecuted'],3); self.assertEqual(self.calls,[])
+        self.assert_refuses_replay()
+    def test_disk_reservation_blocks_before_started(self):
+        self.setup_journal(); self.context.bytes=LIMITS['raw_output_bytes']-LIMITS['slot_reserve_bytes']+1
+        self.assertEqual(run(self.context,actor=self.actor),2)
+        self.assertEqual(self.calls,[]); self.assertEqual(self.report()['supplement']['unexecuted'],3)
+    def test_deadline_reservation_blocks_before_started(self):
+        self.setup_journal(); times=iter((0,400))
+        self.assertEqual(run(self.context,actor=self.actor,clock=lambda:next(times)),2)
+        self.assertEqual(self.calls,[]); self.assertIn('budget_stop',self.report()['halt_codes'])
+    def test_cleanup_unconfirmed_retains_terminal_and_blocks_later(self):
+        self.setup_journal()
+        def actor(*args):return raw_actor(*args,mutate=lambda m,r,t:(m.update(owned_processes_remaining=1),r.update(owned_processes_remaining=1)))
+        self.assertEqual(run(self.context,actor=actor),2)
+        report=self.report(); self.assertEqual(report['supplement']['terminal'],1)
+        self.assertIn('cleanup_unconfirmed',report['halt_codes']); self.assert_refuses_replay()
+    def test_duplicate_started_returned_terminal_and_classification_rejected_before_write(self):
+        journal=self.setup_journal()
+        with journal.writer():
+            journal.start('s001'); before=(journal.root/'journal.jsonl').read_bytes()
+            with self.assertRaises(SuiteError):journal.start('s001')
+            self.assertEqual((journal.root/'journal.jsonl').read_bytes(),before)
+            journal.returned('s001','c'*64)
+            with self.assertRaises(SuiteError):journal.returned('s001','c'*64)
+            artifacts={k:'c'*64 for k in ARTIFACTS}; journal.terminal('s001',metrics('failed','invalid_decision'),artifacts)
+            with self.assertRaises(SuiteError):journal.terminal('s001',metrics('failed','invalid_decision'),artifacts)
+            journal.classify('s001',True)
+            with self.assertRaises(SuiteError):journal.classify('s001',True)
+    def test_out_of_order_and_original_ids_rejected_without_mutation(self):
+        journal=self.setup_journal(); before=(journal.root/'journal.jsonl').read_bytes()
+        with journal.writer():
+            for sid in ('s002','s003','a045','a046'):
+                with self.assertRaises(SuiteError):journal.start(sid)
+        self.assertEqual((journal.root/'journal.jsonl').read_bytes(),before)
+    def test_false_positive_classification_cannot_authorize_later_start(self):
+        journal=self.setup_journal()
+        with journal.writer():
+            journal.start('s001'); journal.returned('s001','c'*64)
+            journal.terminal('s001',metrics('failed','budget_exhausted'),{k:'c'*64 for k in ARTIFACTS})
+            before=(journal.root/'journal.jsonl').read_bytes()
+            with self.assertRaises(SuiteError):journal.classify('s001',True)
+            with self.assertRaises(SuiteError):journal.start('s002')
+            self.assertEqual((journal.root/'journal.jsonl').read_bytes(),before)
+        report=self.report(); self.assertEqual(report['unexpected_terminal_ids'],['s001'])
+        self.assertFalse(report['dispatch_authorized']); self.assertTrue(report['stop_for_main_review'])
+    def test_claim_before_started_preserves_unexecuted_but_requires_review(self):
+        self.setup_journal(); write_exclusive(self.context.out/'run.claim.json',{'single_invocation':True})
+        report=self.report(); self.assertEqual(report['supplement']['unexecuted'],3)
+        self.assertTrue(report['batch_claim_present']); self.assertTrue(report['incomplete_claimed_batch'])
+        self.assertTrue(report['stop_for_main_review']); self.assertFalse(report['dispatch_authorized'])
+        self.assert_refuses_replay()
+    def test_partial_terminal_row_retains_unknowns_and_read_only_report(self):
+        journal=self.setup_journal()
+        with journal.writer():journal.start('s001')
+        with (journal.root/'journal.jsonl').open('ab') as stream:stream.write(b'{"event":"TERMINAL"')
+        before=(journal.root/'journal.jsonl').read_bytes(); report=self.report()
+        self.assertEqual(report['supplement']['interrupted_unknown'],3)
+        self.assertTrue(report['torn_tail']); self.assertFalse(report['dispatch_authorized'])
+        self.assertEqual((journal.root/'journal.jsonl').read_bytes(),before)
+        with self.assertRaises(SuiteError):run(self.context,actor=self.actor)
+    def test_failed_intention_ack_has_no_actor_and_incomplete_denominator(self):
+        with self.assertRaises(OSError):prepare(self.context,hook=self.fail_hook('INTENDED','after_fsync'))
+        report=self.report(); self.assertFalse(report['supplement']['intended_complete'])
+        self.assertEqual(report['supplement']['persisted_intention_records'],1)
+        self.assertEqual(report['logical_original_slots']['intended'],72)
+        with self.assertRaises(SuiteError):run(self.context,actor=self.actor)
+        self.assertEqual(self.calls,[])
+    def test_public_output_redacts_private_prose_and_usage_unknown_not_zero(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor),0)
+        report=self.report(); self.assertNotIn('private-credential',json.dumps(report))
+        self.assertNotIn('private-credential',(self.context.out/'journal.jsonl').read_text())
+        usage=read_json(self.context.out/'s001.usage.json')
+        self.assertIsNone(usage['model_tokens']); self.assertIsNone(usage['actual_cost'])
+        self.assertIsNone(usage['estimated_cost']); self.assertFalse(usage['billing_receipt_available'])
+    def test_extra_secret_fields_in_plan_or_journal_rejected_before_bytes(self):
+        plan=blueprint(); plan['token']='Bearer private-credential-shaped-test'
+        with self.assertRaises(SuiteError):validate_plan(plan)
+        journal=self.setup_journal(); before=(journal.root/'journal.jsonl').read_bytes()
+        with journal.writer():
+            with self.assertRaises(SuiteError):journal._append('STARTED','s001',{'token':'private-credential'})
+            with self.assertRaises(SuiteError):journal.halt('private-credential')
+        self.assertEqual((journal.root/'journal.jsonl').read_bytes(),before)
+    def test_writer_conflict_never_takes_over(self):
+        journal=self.setup_journal(); (journal.root/'writer.lock').write_text('existing unknown owner')
+        with self.assertRaises(SuiteError):run(self.context,actor=self.actor)
+        self.assertEqual((journal.root/'writer.lock').read_text(),'existing unknown owner'); self.assertEqual(self.calls,[])
+    def test_wrong_execution_version_report_refused(self):
+        self.setup_journal()
+        with self.assertRaises(SuiteError):reconcile(self.context.out,'b'*64)
+    def test_changed_plan_refused_without_actor_or_restamping(self):
+        self.setup_journal(); plan=read_json(self.context.out/'plan.json'); plan['execution_code_sha256']='c'*64
+        (self.context.out/'plan.json').write_text(json.dumps(plan))
+        with self.assertRaises(SuiteError):run(self.context,actor=self.actor)
+        self.assertEqual(self.calls,[])
+    def test_missing_terminal_evidence_report_keeps_terminal_and_blocks(self):
+        self.setup_journal(); self.assertEqual(run(self.context,actor=self.actor),0)
+        (self.context.out/'s001.usage.json').unlink(); before=(self.context.out/'journal.jsonl').read_bytes()
+        report=self.report(); self.assertEqual(report['supplement']['terminal'],3)
+        self.assertEqual(report['raw_evidence_error_ids'],['s001']); self.assertTrue(report['stop_for_main_review'])
+        self.assertEqual((self.context.out/'journal.jsonl').read_bytes(),before); self.assert_refuses_replay()
+    def test_context_contract_constructs_no_native_actor(self):
+        with patch('evaluation.upgrade.narrative_supplement.runner.native_actor',side_effect=AssertionError('native forbidden')) as blocked:
+            self.setup_journal()
+            self.assertTrue(self.report()['current_source_parent_proposal_match'])
+            blocked.assert_not_called()
+
+
+class SealedContextPureTests(unittest.TestCase):
+    """Same source/refusal contracts on public synthetic inputs, no private evidence."""
+    def setUp(self):
+        (ROOT/'work').mkdir(exist_ok=True)
+        self.temp=tempfile.TemporaryDirectory(prefix='u2b2-context-pure-',dir=ROOT/'work')
+        self.root=Path(self.temp.name).resolve()/'checkout'; self.assertTrue(self.root.is_relative_to((ROOT/'work').resolve()))
+        build_contract_root(self.root,ROOT)
+        self.review=self.root/POPULATION
+        self.context=Context(self.root,file_hash(self.root/SEAL),self.review,'pure-context-test')
+    def tearDown(self):
+        self.assertTrue(self.root.is_relative_to((ROOT/'work').resolve())); self.temp.cleanup()
+    def test_full_frozen_source_parent_proposal_match_without_actor(self):
+        self.assertTrue(self.context.verify())
+        self.assertEqual(self.context.blueprint['attempts'],PROPOSAL_VALUE['attempts'])
+        self.assertFalse(self.context.out.exists())
+    def test_changed_parent_raw_file_refuses_before_prepare(self):
+        raw=self.root/PARENT/'capability/a045/report.json'; raw.write_bytes(raw.read_bytes()+b' ')
+        with self.assertRaises(SuiteError):prepare(self.context)
+        self.assertFalse(self.context.out.exists())
+    def test_changed_proposal_refuses_before_prepare(self):
+        path=self.root/PROPOSAL; path.write_bytes(path.read_bytes()+b' ')
+        with self.assertRaises(SuiteError):prepare(self.context)
+        self.assertFalse(self.context.out.exists())
+    def test_changed_actor_source_refuses_before_prepare(self):
+        path=self.root/'permissioned_research/upgrade/narrative/provider.py'; path.write_bytes(path.read_bytes()+b'\n')
+        with self.assertRaises(SuiteError):prepare(self.context)
+        self.assertFalse(self.context.out.exists())
+    def test_changed_execution_source_refuses_before_prepare(self):
+        path=self.root/'evaluation/upgrade/narrative_supplement/runner.py'; path.write_bytes(path.read_bytes()+b'\n')
+        with self.assertRaises(SuiteError):prepare(self.context)
+        self.assertFalse(self.context.out.exists())
+    def test_changed_population_review_refuses_before_prepare(self):
+        self.review.write_bytes(self.review.read_bytes()+b' ')
+        with self.assertRaises(SuiteError):prepare(self.context)
+        self.assertFalse(self.context.out.exists())
+
+
+if __name__=='__main__':unittest.main()

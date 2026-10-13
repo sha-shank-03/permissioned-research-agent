@@ -1,0 +1,222 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-conf-01",
+  "input_sha256": "9dc90db4e244732c6c2ab0247230ced8e9b8fbf8b0e2a9092e270c5d7b12e573",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "conflict",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-conf-01-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone103; archive tier R103 is excluded.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": true,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone103; archive tier R103 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "c8c82fd88ad816acc05c0ccdd8e77c25dd75320408a0c3dbbf1aaf06300396e7",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate3 only after certificate R103 is approved.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": false,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 90,
+      "end": 157,
+      "quote": "sso: Federation uses Gate3 only after certificate R103 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "40cc8c5d937132c2180b78a7b152c3d0239541a8c666888a6ee96edee4a159c3",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 14 business days after approval R103.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": true,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 158,
+      "end": 238,
+      "quote": "onboarding_days: Standard onboarding takes 14 business days after approval R103.",
+      "temporal_role": "current",
+      "semantic_signature": "8eb3f5c23eb1e7d6ffa194721bff67db7c98c8f47a0a384d6929c6f76ec79fb1",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 13 minutes for incident class R103.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": false,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 239,
+      "end": 317,
+      "quote": "support_hours: Priority response is within 13 minutes for incident class R103.",
+      "temporal_role": "current",
+      "semantic_signature": "5ce088cc44cd0e8a021c33cfc3b03fb4f8de21932d56a18fa869bd8568f33d39",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R103 and the designated reviewer.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": true,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 318,
+      "end": 399,
+      "quote": "conditions: Activation requires signed schedule R103 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "d2f6d222206e974a64633b25744ac04073bb56d05ac5af8fde8466e9fabc3c0e",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R103 before the rehearsal.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": false,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 400,
+      "end": 489,
+      "quote": "dependencies: The import stage depends on completing checklist R103 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "63a96bc2915c972113a147f80376013dd684069b622abf5615e5c296aac55b55",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R103 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": false,
+      "source_id": "development-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "99d0820bfe79e279eaf636d441135c2b2ea328fa935f93fd87491930c7ad0235",
+      "start": 490,
+      "end": 576,
+      "quote": "exceptions: Custom migration package R103 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "be227329b0e427307db16a8a9baab0c5a2b5da80d6c6b535a5fbcf70ba768faf",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R103 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": true,
+      "source_id": "development-conf-01-peer",
+      "revision": "1",
+      "content_sha256": "1dbf895ed75e818045450eea535e6962281500fbbb4323e68dea15062360420a",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R103 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "79378850e660b6d28ca77e716e07512ce09be106e2d10ec79226552278275a70",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R103 requires finance concurrence. DEVELOPMENT_CONF_01_DENIED",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": false,
+      "source_id": "development-conf-01-private",
+      "revision": "1",
+      "content_sha256": "b14ad9ee1c19e3bc0c17bdec3848ee04a0d807200b86a7af0917af7f19ebba0f",
+      "start": 0,
+      "end": 94,
+      "quote": "dependencies: Procurement ticket R103 requires finance concurrence. DEVELOPMENT_CONF_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "73637a59db1215792ec29fff567024731766e669930a6e2709bab4fc76458ec9",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-conf-01-f10",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone803; archive tier R103 is excluded.",
+      "qualifiers": [
+        "R103"
+      ],
+      "critical": true,
+      "source_id": "development-conf-01-conflicting-current",
+      "revision": "1",
+      "content_sha256": "18bff5f5942e3d1f0e61d642cf8a20d2eec565c4296b928bb0c36b6c52213a2a",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone803; archive tier R103 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "8ced6e9ad8de022f28555169bef4201f298875ffeffcdaeea2d10550c35abdfe",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "DEVELOPMENT_CONF_01_DENIED": "development-conf-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-conf-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

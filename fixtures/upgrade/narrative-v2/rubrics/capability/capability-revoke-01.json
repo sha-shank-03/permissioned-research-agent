@@ -1,0 +1,206 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-revoke-01",
+  "input_sha256": "8c80ff9dfa7fd03a272417626ce36f7dac1142a791fd6980c10b6cb9482f8360",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-revoke-01-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone129; archive tier R129 is excluded.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone129; archive tier R129 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "fcdbf11eef1cdcfae2fa4a7d290abf72d6daf472f7696fdae71112201fa984cb",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate29 only after certificate R129 is approved.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate29 only after certificate R129 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "c344c8deede87cb77309f78dca389c0a8168d8543a67d88234e715d3c00785a0",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 40 business days after approval R129.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 40 business days after approval R129.",
+      "temporal_role": "current",
+      "semantic_signature": "09f3337cf921dc11dda9ee3d7fd576ca49b00e808d86ce5ea241b94de1ba233b",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 39 minutes for incident class R129.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 39 minutes for incident class R129.",
+      "temporal_role": "current",
+      "semantic_signature": "508c5eebfeeae44b36797a3a759d49ce588c22642408040a3d24fcc32cee5d23",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R129 and the designated reviewer.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R129 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "ecb2ff6dccc3f28f9008c1045205a9f67ee2ad4745ea5602bda4559c1b1254ce",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R129 before the rehearsal.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R129 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "d3fbc456ef0d6b4db41b2bec26eee79d26cbfef15058d77ac2370894c1f39a31",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R129 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-01-primary",
+      "revision": "1",
+      "content_sha256": "b72d64c89471e2a211c99fe2784a2f834d1ef9d9005a29083802bd3bab1134f3",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R129 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "7f2d0aea50c7274cc4c3d70f2be297cbae2a4c03cb7f54307a53a7d6e2fdbd7d",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R129 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-01-peer",
+      "revision": "1",
+      "content_sha256": "68d93b5ea3ad1685cbf86d735cded6e509512598cc09b7774b559d17d6e7c7f4",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R129 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "bd57c4921d04915b35ef7431e018398cac0d215612839bd803962e95465c755f",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R129 requires finance concurrence. CAPABILITY_REVOKE_01_DENIED",
+      "qualifiers": [
+        "R129"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-01-private",
+      "revision": "1",
+      "content_sha256": "45ba9708ca146b1300096e2cb9b860e3822bf5aa403ee39ff60995af82093d87",
+      "start": 0,
+      "end": 95,
+      "quote": "dependencies: Procurement ticket R129 requires finance concurrence. CAPABILITY_REVOKE_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "f242bb0bb5a5245bd2f0a487fb2731a377f784616e74f67128099e288d8a0c68",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [
+    "capability-revoke-01-event1"
+  ],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_REVOKE_01_DENIED": "capability-revoke-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-revoke-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-time-01",
+  "input_sha256": "026b0067cf52d000433cc3f4ddb7c893350f587a6857b2d9675f9e66ada33dd8",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "stale_only",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-time-01-f01",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 15 minutes for incident class R105.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": false,
+      "source_id": "development-time-01-expired",
+      "revision": "1",
+      "content_sha256": "54c7e14c920deb6555165139ac1cfb23b92ba67de6821d44a6b634bac52fd1bf",
+      "start": 0,
+      "end": 78,
+      "quote": "support_hours: Priority response is within 15 minutes for incident class R105.",
+      "temporal_role": "stale",
+      "semantic_signature": "24adc62110e8a24b720adeae97ba8848eca4a8580e16789ed8d9e154c733b982",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f02",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone105; archive tier R105 is excluded.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": true,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone105; archive tier R105 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "f2db74310783e49afed024121a1cbd0e1a68d11361a250d4a0a61e60cbee045f",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f03",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate5 only after certificate R105 is approved.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": false,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 90,
+      "end": 157,
+      "quote": "sso: Federation uses Gate5 only after certificate R105 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "308300c3b990a5a4b5054612520aecd23f232308b1bd12ed619c41fc8a7cec33",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f04",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 16 business days after approval R105.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": true,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 158,
+      "end": 238,
+      "quote": "onboarding_days: Standard onboarding takes 16 business days after approval R105.",
+      "temporal_role": "current",
+      "semantic_signature": "3fc721110877aaaef4ad2371b1621cd45428af0dc27de8c2f67541b66e5fed5a",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R105 and the designated reviewer.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": true,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 239,
+      "end": 320,
+      "quote": "conditions: Activation requires signed schedule R105 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "6a2fe81264110de6f93f4c1fed260506cef2a444faf2f3371ae5e8db85a055e9",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R105 before the rehearsal.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": false,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 321,
+      "end": 410,
+      "quote": "dependencies: The import stage depends on completing checklist R105 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "407d906076a708c23cbd0b2c7fb02d6857dd39891106cff33563ffd7d4149a97",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R105 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": false,
+      "source_id": "development-time-01-primary",
+      "revision": "1",
+      "content_sha256": "7825fb8010539d97dd11946812be18a0553aeca8c7c7cb2c6993aa770e89cbb5",
+      "start": 411,
+      "end": 497,
+      "quote": "exceptions: Custom migration package R105 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "bcc5eb80b24031be696c78db2e88711e005db39bbeb1018a41931798be441d43",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R105 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": true,
+      "source_id": "development-time-01-peer",
+      "revision": "1",
+      "content_sha256": "2f2085184699e5df325b501e7ffd4abcb522c13ba86c2eed2eb13a75a91b06a9",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R105 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "5ef91b8f2e4d606001beda9f7922dec878e893b69616a8b878519b068eac7fcc",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R105 requires finance concurrence. DEVELOPMENT_TIME_01_DENIED",
+      "qualifiers": [
+        "R105"
+      ],
+      "critical": false,
+      "source_id": "development-time-01-private",
+      "revision": "1",
+      "content_sha256": "3218dd7271f31e716f3114ca378bde9dfce596fcec475f35ed8f34e34aec0183",
+      "start": 0,
+      "end": 94,
+      "quote": "dependencies: Procurement ticket R105 requires finance concurrence. DEVELOPMENT_TIME_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "efd6b9407a5d07eeea18b55371c6a0b449bfc9cb3c1ce67a6945dd2a1ee5dc81",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "DEVELOPMENT_TIME_01_DENIED": "development-time-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-time-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

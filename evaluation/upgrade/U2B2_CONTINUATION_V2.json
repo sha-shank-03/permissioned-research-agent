@@ -1,0 +1,95 @@
+{
+  "schema": "narrative-three-slot-continuation-v2",
+  "version": "u2b2-operational-hypothesis-v2",
+  "state": "proposed_unexecuted",
+  "bindings": {
+    "actor_source_manifest_sha256": "25350c9f769f98feddc5285d07ed1df008382e035de967186f306d32f881e020",
+    "frozen_native_commands_sha256": "0a85541c65c56cd2e4b461c2058922a99323224b6df01ae359f643c795b17711",
+    "capability_plan_sha256": "047b94e0a6e983e8b6ea4ce3805366cdb8b65ddb4b9ff7b0f22173867b6166c2",
+    "capability_journal_sha256": "3b43fae0e2c06ad53af71234d06fcfa6942471f1d4784f2b0620afab39c9e9bc",
+    "development_plan_sha256": "4194aeb6e0179a55d456745d234d541e54d0b394a9ac6c25217f8579d59acfe5",
+    "development_journal_sha256": "eb3483e804aeca678644b5723310c8e8a3bdbffb932c29d146a8dbc28a3f925a",
+    "population_review_sha256": "1d28e4599eb6176960f1cea15d26e21d03dce4be3ec090e3d9530c4bd94f5bb0",
+    "parent_cohort_inventory_sha256": "4c3498f5e657e5092b15f16d3396abc56b184ac8c0ebb46f2a053ef630d72232",
+    "correction_code_sha256": "25b6cd1d203de718331235ea5a2765d412a86e8320ca2b1c3d10455eb3863dfa"
+  },
+  "parent_checkpoint_sha256": "85d1b35f248c9e6849b9b05f3a0e1124184ee42b8d41d26bbb045ffdf60979ac",
+  "attempts": [
+    {
+      "id": "s001",
+      "parent_attempt_id": "a046",
+      "task_id": "capability-budget-03",
+      "family": "budget_failure",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_sha256": "65f64380474ceab00960fe77b7b1477099f9d81e490314c10375906ffc27b0f8",
+      "rubric_sha256": "a44926a56755e1a74dd6cdfd739536250042db0f748ec0db2103542058890ab9",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "invalid_decision"
+        }
+      ],
+      "state": "unexecuted"
+    },
+    {
+      "id": "s002",
+      "parent_attempt_id": "a047",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "state": "unexecuted"
+    },
+    {
+      "id": "s003",
+      "parent_attempt_id": "a048",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "state": "unexecuted"
+    }
+  ],
+  "accounting": {
+    "original_intended": 72,
+    "original_terminal": 69,
+    "original_unexecuted": 3,
+    "supplement_intended": 3,
+    "supplement_started": 0,
+    "supplement_terminal": 0,
+    "supplement_interrupted_unknown": 0,
+    "supplement_unexecuted": 3,
+    "logical_original_slots_pending": 3,
+    "physical_intent_records": 75
+  },
+  "execution_protocol": {
+    "existing_plan_or_journal_writes": false,
+    "replay_started_or_terminal": false,
+    "restamp_earlier_source_versions": false,
+    "native_entrypoint_implemented": false,
+    "new_main_review_and_named_lease_required": true,
+    "future_harness_source_freeze_required": true,
+    "fresh_supplement_directory_required": true,
+    "fsync_started_before_actor_required": true
+  }
+}

@@ -1,0 +1,2732 @@
+{
+  "schema": "u2b2-future-native-command-manifest-v1",
+  "created_on": "2026-10-12",
+  "state": "proposed_native_demo_evaluation_unexecuted_source_review_then_new_assignment_and_lease_required",
+  "cwd": "repository_root",
+  "serial_only": true,
+  "stop_on_unresolved_operational_failure": true,
+  "no_automatic_reruns": true,
+  "completed_or_started_attempts_never_reexecuted": true,
+  "provider": "owned_narrative_gateway_double",
+  "model": "test/synthetic-scalar",
+  "local_only": true,
+  "live_model_executed": false,
+  "remote_google_authorization_proven": false,
+  "input_tasks": {
+    "development": 12,
+    "capability": 24
+  },
+  "families": 6,
+  "repeats": 1,
+  "intended_policy_attempts": 72,
+  "native_slice_count": 18,
+  "command_count": 41,
+  "pack_freeze_sha256": "8d195208feb3bb224157e4ef43e0f813533b32ee7a126f262b906de13430dc06",
+  "source_manifest_path": "evaluation/upgrade/U2B2_SOURCE_MANIFEST.json",
+  "resource_proposal_per_native_slice": {
+    "active_minutes": 10,
+    "internal_native_seconds": 520,
+    "working_ram_mib": 512,
+    "shared_bundle_raw_output_mib": 64,
+    "python_processes_including_recorder": 3,
+    "owned_client_children": 1,
+    "owned_loopback_doubles": 1,
+    "downloads": 0,
+    "external_http_calls": 0,
+    "live_model_calls": 0,
+    "peak_limits_are_proposals_not_measurements": true
+  },
+  "ci_proposal_path": "docs/ci-u2b2-proposal.yml",
+  "commands": [
+    {
+      "order": 1,
+      "name": "source-verification",
+      "operation": "verify-source",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "verify-source"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite verify-source",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": false,
+      "executed_under_native_lease": false
+    },
+    {
+      "order": 2,
+      "name": "development-intended-plan",
+      "operation": "plan",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "plan",
+        "--split",
+        "development",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite plan --split development --provider gateway-double --model test/synthetic-scalar --out work/upgrade-u2b2-native-v1/development",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "intended_attempts": 24
+    },
+    {
+      "order": 3,
+      "name": "development-native-01",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "1",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 1 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": true,
+      "task_policy_ids": [
+        "development-qual-01:adaptive",
+        "development-qual-01:fixed",
+        "development-qual-02:adaptive",
+        "development-qual-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 4,
+      "name": "development-inspect-01",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "1",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-01.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 1 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-01.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 5,
+      "name": "development-native-02",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "5",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 5 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "development-conf-01:adaptive",
+        "development-conf-01:fixed",
+        "development-conf-02:adaptive",
+        "development-conf-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 6,
+      "name": "development-inspect-02",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "5",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-02.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 5 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-02.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 7,
+      "name": "development-native-03",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "9",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 9 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "development-time-01:adaptive",
+        "development-time-01:fixed",
+        "development-time-02:adaptive",
+        "development-time-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 8,
+      "name": "development-inspect-03",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "9",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-03.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 9 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-03.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 9,
+      "name": "development-native-04",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "13",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 13 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "development-scope-01:adaptive",
+        "development-scope-01:fixed",
+        "development-scope-02:adaptive",
+        "development-scope-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 10,
+      "name": "development-inspect-04",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "13",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-04.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 13 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-04.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 11,
+      "name": "development-native-05",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "17",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 17 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "development-revoke-01:adaptive",
+        "development-revoke-01:fixed",
+        "development-revoke-02:adaptive",
+        "development-revoke-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 12,
+      "name": "development-inspect-05",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "17",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-05.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 17 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-05.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 13,
+      "name": "development-native-06",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "21",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 21 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "development-budget-01:adaptive",
+        "development-budget-01:fixed",
+        "development-budget-02:adaptive",
+        "development-budget-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 14,
+      "name": "development-inspect-06",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development",
+        "--start",
+        "21",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/development-inspection-06.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 21 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-06.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 15,
+      "name": "development-final-accounting",
+      "operation": "account",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "account",
+        "--out",
+        "work/upgrade-u2b2-native-v1/development"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite account --out work/upgrade-u2b2-native-v1/development",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "intended_attempts": 24
+    },
+    {
+      "order": 16,
+      "name": "capability-intended-plan",
+      "operation": "plan",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "plan",
+        "--split",
+        "capability",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite plan --split capability --provider gateway-double --model test/synthetic-scalar --out work/upgrade-u2b2-native-v1/capability",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "intended_attempts": 48
+    },
+    {
+      "order": 17,
+      "name": "capability-native-01",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "1",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 1 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-qual-01:adaptive",
+        "capability-qual-01:fixed",
+        "capability-qual-02:adaptive",
+        "capability-qual-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 18,
+      "name": "capability-inspect-01",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "1",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-01.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 1 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-01.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 19,
+      "name": "capability-native-02",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "5",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 5 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-qual-03:adaptive",
+        "capability-qual-03:fixed",
+        "capability-qual-04:adaptive",
+        "capability-qual-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 20,
+      "name": "capability-inspect-02",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "5",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-02.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 5 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-02.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 21,
+      "name": "capability-native-03",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "9",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 9 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-conf-01:adaptive",
+        "capability-conf-01:fixed",
+        "capability-conf-02:adaptive",
+        "capability-conf-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 22,
+      "name": "capability-inspect-03",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "9",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-03.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 9 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-03.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 23,
+      "name": "capability-native-04",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "13",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 13 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-conf-03:adaptive",
+        "capability-conf-03:fixed",
+        "capability-conf-04:adaptive",
+        "capability-conf-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 24,
+      "name": "capability-inspect-04",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "13",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-04.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 13 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-04.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 25,
+      "name": "capability-native-05",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "17",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 17 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-time-01:adaptive",
+        "capability-time-01:fixed",
+        "capability-time-02:adaptive",
+        "capability-time-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 26,
+      "name": "capability-inspect-05",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "17",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-05.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 17 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-05.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 27,
+      "name": "capability-native-06",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "21",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 21 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-time-03:adaptive",
+        "capability-time-03:fixed",
+        "capability-time-04:adaptive",
+        "capability-time-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 28,
+      "name": "capability-inspect-06",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "21",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-06.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 21 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-06.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 29,
+      "name": "capability-native-07",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "25",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 25 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-scope-01:adaptive",
+        "capability-scope-01:fixed",
+        "capability-scope-02:adaptive",
+        "capability-scope-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 30,
+      "name": "capability-inspect-07",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "25",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-07.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 25 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-07.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 31,
+      "name": "capability-native-08",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "29",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 29 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-scope-03:adaptive",
+        "capability-scope-03:fixed",
+        "capability-scope-04:adaptive",
+        "capability-scope-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 32,
+      "name": "capability-inspect-08",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "29",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-08.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 29 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-08.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 33,
+      "name": "capability-native-09",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "33",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 33 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-revoke-01:adaptive",
+        "capability-revoke-01:fixed",
+        "capability-revoke-02:adaptive",
+        "capability-revoke-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 34,
+      "name": "capability-inspect-09",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "33",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-09.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 33 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-09.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 35,
+      "name": "capability-native-10",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "37",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 37 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-revoke-03:adaptive",
+        "capability-revoke-03:fixed",
+        "capability-revoke-04:adaptive",
+        "capability-revoke-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 36,
+      "name": "capability-inspect-10",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "37",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-10.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 37 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-10.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 37,
+      "name": "capability-native-11",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "41",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 41 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-budget-01:adaptive",
+        "capability-budget-01:fixed",
+        "capability-budget-02:adaptive",
+        "capability-budget-02:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 38,
+      "name": "capability-inspect-11",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "41",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-11.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 41 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-11.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 39,
+      "name": "capability-native-12",
+      "operation": "run-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "run-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "45",
+        "--count",
+        "4",
+        "--slice-seconds",
+        "520"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/capability --start 45 --count 4 --slice-seconds 520",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "maximum_attempts": 4,
+      "native_slice_seconds": 520,
+      "first_development_slice_is_paired_demo": false,
+      "task_policy_ids": [
+        "capability-budget-03:adaptive",
+        "capability-budget-03:fixed",
+        "capability-budget-04:adaptive",
+        "capability-budget-04:fixed"
+      ],
+      "semantic_judgments": null
+    },
+    {
+      "order": 40,
+      "name": "capability-inspect-12",
+      "operation": "inspect-slice",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "inspect-slice",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability",
+        "--start",
+        "45",
+        "--count",
+        "4",
+        "--evaluation-out",
+        "work/upgrade-u2b2-native-v1/capability-inspection-12.json"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/capability --start 45 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/capability-inspection-12.json",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "after_actor_cleanup": true,
+      "independent_manual_reviews_supplied": false,
+      "semantic_judgments": null
+    },
+    {
+      "order": 41,
+      "name": "capability-final-accounting",
+      "operation": "account",
+      "argv": [
+        "py",
+        "-3.11",
+        "-m",
+        "evaluation.upgrade.narrative_suite",
+        "account",
+        "--out",
+        "work/upgrade-u2b2-native-v1/capability"
+      ],
+      "command": "py -3.11 -m evaluation.upgrade.narrative_suite account --out work/upgrade-u2b2-native-v1/capability",
+      "expected_exit": 0,
+      "fresh_native_assignment_and_named_lease_required": true,
+      "executed_under_native_lease": false,
+      "intended_attempts": 48
+    }
+  ],
+  "intended_matrix": [
+    {
+      "split": "development",
+      "ordinal": 1,
+      "attempt_id": "a001",
+      "task_id": "development-qual-01",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "60a964c8eb2e46c092a144b2f4c40214a3afb19286d465f939c0a866a59d3c54",
+      "rubric_file_sha256": "9f8ea3cfffb9f5820195462ec40ebf578f86e17c13d328c1cc7e8f96f4d3d675",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 2,
+      "attempt_id": "a002",
+      "task_id": "development-qual-01",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "60a964c8eb2e46c092a144b2f4c40214a3afb19286d465f939c0a866a59d3c54",
+      "rubric_file_sha256": "9f8ea3cfffb9f5820195462ec40ebf578f86e17c13d328c1cc7e8f96f4d3d675",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 3,
+      "attempt_id": "a003",
+      "task_id": "development-qual-02",
+      "family": "qualifiers_dependencies",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "dda6f9fa28eb1d5293d2a4af2d5169d10590d9e105e764c4788824166839d104",
+      "rubric_file_sha256": "785e3b697235f65e838a441e6bdc336e58177eed6513b04975d3af23cebbfea4",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 4,
+      "attempt_id": "a004",
+      "task_id": "development-qual-02",
+      "family": "qualifiers_dependencies",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "dda6f9fa28eb1d5293d2a4af2d5169d10590d9e105e764c4788824166839d104",
+      "rubric_file_sha256": "785e3b697235f65e838a441e6bdc336e58177eed6513b04975d3af23cebbfea4",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 5,
+      "attempt_id": "a005",
+      "task_id": "development-conf-01",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "59357de851e9cfd046ebc13fc6a0e45727ec5e5daca89dab69deb5f9f0b03884",
+      "rubric_file_sha256": "631367ee908e73e400022d0a4ed679b9ceb0d8ba698bbc928c55b5a0cef214f8",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 6,
+      "attempt_id": "a006",
+      "task_id": "development-conf-01",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "59357de851e9cfd046ebc13fc6a0e45727ec5e5daca89dab69deb5f9f0b03884",
+      "rubric_file_sha256": "631367ee908e73e400022d0a4ed679b9ceb0d8ba698bbc928c55b5a0cef214f8",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 7,
+      "attempt_id": "a007",
+      "task_id": "development-conf-02",
+      "family": "conflicts",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "5abd3edc6d31172d93089641486ac4efe0e4f1c260fc559870fbe99f77166c0d",
+      "rubric_file_sha256": "d525e237a77a8179366491334d9b649bb5e415403099216addce90c403cbe727",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 8,
+      "attempt_id": "a008",
+      "task_id": "development-conf-02",
+      "family": "conflicts",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "5abd3edc6d31172d93089641486ac4efe0e4f1c260fc559870fbe99f77166c0d",
+      "rubric_file_sha256": "d525e237a77a8179366491334d9b649bb5e415403099216addce90c403cbe727",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 9,
+      "attempt_id": "a009",
+      "task_id": "development-time-01",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "b47bc466268d1c9b8dbc35d4911b9e53a09f55edf28b02f5d54fef28ce53c386",
+      "rubric_file_sha256": "3d3acc79b60654d31553f54ba75021161b0e0af9e4591171b6ca15b69c726b29",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 10,
+      "attempt_id": "a010",
+      "task_id": "development-time-01",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "b47bc466268d1c9b8dbc35d4911b9e53a09f55edf28b02f5d54fef28ce53c386",
+      "rubric_file_sha256": "3d3acc79b60654d31553f54ba75021161b0e0af9e4591171b6ca15b69c726b29",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 11,
+      "attempt_id": "a011",
+      "task_id": "development-time-02",
+      "family": "temporal_missing",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "fdc531197b3fe2ea5d743c9b22d302fac2cebb09e985ebc8c1659ce3f2e9bb5a",
+      "rubric_file_sha256": "322bec23c62c1830a065493836286cd9125c8aaa338afae00e59759ddb8048b5",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 12,
+      "attempt_id": "a012",
+      "task_id": "development-time-02",
+      "family": "temporal_missing",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "fdc531197b3fe2ea5d743c9b22d302fac2cebb09e985ebc8c1659ce3f2e9bb5a",
+      "rubric_file_sha256": "322bec23c62c1830a065493836286cd9125c8aaa338afae00e59759ddb8048b5",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 13,
+      "attempt_id": "a013",
+      "task_id": "development-scope-01",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "14d466397d4084eef681064f34030a8772877f6d59686d77a5bf09dcab683e58",
+      "rubric_file_sha256": "27b231887f62274ed9d32e5b2382ba0c19b3f32a3e7b9eb37146a9d2a8b5cce6",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 14,
+      "attempt_id": "a014",
+      "task_id": "development-scope-01",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "14d466397d4084eef681064f34030a8772877f6d59686d77a5bf09dcab683e58",
+      "rubric_file_sha256": "27b231887f62274ed9d32e5b2382ba0c19b3f32a3e7b9eb37146a9d2a8b5cce6",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 15,
+      "attempt_id": "a015",
+      "task_id": "development-scope-02",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "8fd294eb0988196594f4ff6780bc8f82c401a8bd66c8a3db76b0961d5e8de070",
+      "rubric_file_sha256": "6dda043ff2adef7f0c0cd7584f4d77c8c0d0c9675e54aa2563b782fc493d9daf",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 16,
+      "attempt_id": "a016",
+      "task_id": "development-scope-02",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "8fd294eb0988196594f4ff6780bc8f82c401a8bd66c8a3db76b0961d5e8de070",
+      "rubric_file_sha256": "6dda043ff2adef7f0c0cd7584f4d77c8c0d0c9675e54aa2563b782fc493d9daf",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 17,
+      "attempt_id": "a017",
+      "task_id": "development-revoke-01",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "afc6b30774bf408f3fd972f10920d2866b5e0f6878d2b582939b9bc17e0c8d41",
+      "rubric_file_sha256": "fc58fc1d8a87f356f9855333ba50c8a593492ece4d48272f9035e165311aa419",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        },
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 18,
+      "attempt_id": "a018",
+      "task_id": "development-revoke-01",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "afc6b30774bf408f3fd972f10920d2866b5e0f6878d2b582939b9bc17e0c8d41",
+      "rubric_file_sha256": "fc58fc1d8a87f356f9855333ba50c8a593492ece4d48272f9035e165311aa419",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 19,
+      "attempt_id": "a019",
+      "task_id": "development-revoke-02",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "190e9151ee5bedd5aa403273af1992778a389acb5bc0c43254b2005c685a64cb",
+      "rubric_file_sha256": "99728b1fbf6b0d6383c58821722c17d5c15ee7aa072b070205ecc18a5c24a3d0",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        },
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 20,
+      "attempt_id": "a020",
+      "task_id": "development-revoke-02",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "190e9151ee5bedd5aa403273af1992778a389acb5bc0c43254b2005c685a64cb",
+      "rubric_file_sha256": "99728b1fbf6b0d6383c58821722c17d5c15ee7aa072b070205ecc18a5c24a3d0",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 21,
+      "attempt_id": "a021",
+      "task_id": "development-budget-01",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "40f3d53f1cb838178d3bc3151f772cc5f6e001f42f5e542f69055c68aef89959",
+      "rubric_file_sha256": "094ba511c6f04b7aac4f2cff4eabc420c53283df2b7c14e688be2a9a50615a74",
+      "config_sha256": "5662b4ff0976091e36bf4c3c2953c360945c47e87abd8d3e05f7da2174a3e12e",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 22,
+      "attempt_id": "a022",
+      "task_id": "development-budget-01",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "40f3d53f1cb838178d3bc3151f772cc5f6e001f42f5e542f69055c68aef89959",
+      "rubric_file_sha256": "094ba511c6f04b7aac4f2cff4eabc420c53283df2b7c14e688be2a9a50615a74",
+      "config_sha256": "5662b4ff0976091e36bf4c3c2953c360945c47e87abd8d3e05f7da2174a3e12e",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 23,
+      "attempt_id": "a023",
+      "task_id": "development-budget-02",
+      "family": "budget_failure",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "fa2e55d8cdc6a79e205ee7436d3bd7531b5cb35c4f2351462df33e06ec9316ab",
+      "rubric_file_sha256": "fd42d3a65e5e8a81674bc23408b93ff75ed545def2a803fcb50c3f3e94beeba1",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "development",
+      "ordinal": 24,
+      "attempt_id": "a024",
+      "task_id": "development-budget-02",
+      "family": "budget_failure",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "fa2e55d8cdc6a79e205ee7436d3bd7531b5cb35c4f2351462df33e06ec9316ab",
+      "rubric_file_sha256": "fd42d3a65e5e8a81674bc23408b93ff75ed545def2a803fcb50c3f3e94beeba1",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 1,
+      "attempt_id": "a001",
+      "task_id": "capability-qual-01",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "3a728f368d7a5b2fc1aec2fee2451e351fde6e21cc9d3bea56935d510426342d",
+      "rubric_file_sha256": "7d342cacf1d59ef2874f31925cf910a8c9966c936448809eacd037c3ec3742e6",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 2,
+      "attempt_id": "a002",
+      "task_id": "capability-qual-01",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "3a728f368d7a5b2fc1aec2fee2451e351fde6e21cc9d3bea56935d510426342d",
+      "rubric_file_sha256": "7d342cacf1d59ef2874f31925cf910a8c9966c936448809eacd037c3ec3742e6",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 3,
+      "attempt_id": "a003",
+      "task_id": "capability-qual-02",
+      "family": "qualifiers_dependencies",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "a506823c8dd4e4469f62041dfa04033bde4e4a455accae604e56c50e62584dc0",
+      "rubric_file_sha256": "514e44fcb075dc1bbaaf04927aca4dab7d80e0839519e9270d4550467ecfa22a",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 4,
+      "attempt_id": "a004",
+      "task_id": "capability-qual-02",
+      "family": "qualifiers_dependencies",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "a506823c8dd4e4469f62041dfa04033bde4e4a455accae604e56c50e62584dc0",
+      "rubric_file_sha256": "514e44fcb075dc1bbaaf04927aca4dab7d80e0839519e9270d4550467ecfa22a",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 5,
+      "attempt_id": "a005",
+      "task_id": "capability-qual-03",
+      "family": "qualifiers_dependencies",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "c02bd7213200ecb6fe500cb12eda26efd04ce51e5697ed7d5e0a0d41580dcee8",
+      "rubric_file_sha256": "cbf2959b1b39566276ed3bbd01c4505ca1819126acc637c163b42d21cfdce146",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 6,
+      "attempt_id": "a006",
+      "task_id": "capability-qual-03",
+      "family": "qualifiers_dependencies",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "c02bd7213200ecb6fe500cb12eda26efd04ce51e5697ed7d5e0a0d41580dcee8",
+      "rubric_file_sha256": "cbf2959b1b39566276ed3bbd01c4505ca1819126acc637c163b42d21cfdce146",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 7,
+      "attempt_id": "a007",
+      "task_id": "capability-qual-04",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "0ca2e18b7110c5421cdb8f3090c78cb6c28602b02cc47cd6870dfdc0a24d3161",
+      "rubric_file_sha256": "29498a19f5427bde0eb99a9f69b82b0b32c69e4a9d34f8e77ae940d8071de722",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 8,
+      "attempt_id": "a008",
+      "task_id": "capability-qual-04",
+      "family": "qualifiers_dependencies",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "0ca2e18b7110c5421cdb8f3090c78cb6c28602b02cc47cd6870dfdc0a24d3161",
+      "rubric_file_sha256": "29498a19f5427bde0eb99a9f69b82b0b32c69e4a9d34f8e77ae940d8071de722",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 9,
+      "attempt_id": "a009",
+      "task_id": "capability-conf-01",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "ac131678f953a384c0abdf4eb81efbf2d7a7310565c45122a77f5a54832ef0ec",
+      "rubric_file_sha256": "6ad2f5b0c1041ca4ac52164a053cec7dc94d466d3c626ec7d7e8aae080a16aad",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 10,
+      "attempt_id": "a010",
+      "task_id": "capability-conf-01",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "ac131678f953a384c0abdf4eb81efbf2d7a7310565c45122a77f5a54832ef0ec",
+      "rubric_file_sha256": "6ad2f5b0c1041ca4ac52164a053cec7dc94d466d3c626ec7d7e8aae080a16aad",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 11,
+      "attempt_id": "a011",
+      "task_id": "capability-conf-02",
+      "family": "conflicts",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "b604a06ab810ba28ac14a0d336077eab80c2f5a8878b47148f87c3e996c3b8eb",
+      "rubric_file_sha256": "c3fcec7fc652678cc01bdbca373ba398df656d838ec0da8dfdb7e70c76cf9b49",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 12,
+      "attempt_id": "a012",
+      "task_id": "capability-conf-02",
+      "family": "conflicts",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "b604a06ab810ba28ac14a0d336077eab80c2f5a8878b47148f87c3e996c3b8eb",
+      "rubric_file_sha256": "c3fcec7fc652678cc01bdbca373ba398df656d838ec0da8dfdb7e70c76cf9b49",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 13,
+      "attempt_id": "a013",
+      "task_id": "capability-conf-03",
+      "family": "conflicts",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "d7f2c1d1c1c99aeeb41df29dda81a4bc6dae91b8faf400c84787c7d019f7c46f",
+      "rubric_file_sha256": "64cb358f90d38f2dddaeaca4ae862ec092df5789d0b91c8de3a56d4cbb2c4690",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 14,
+      "attempt_id": "a014",
+      "task_id": "capability-conf-03",
+      "family": "conflicts",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "d7f2c1d1c1c99aeeb41df29dda81a4bc6dae91b8faf400c84787c7d019f7c46f",
+      "rubric_file_sha256": "64cb358f90d38f2dddaeaca4ae862ec092df5789d0b91c8de3a56d4cbb2c4690",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 15,
+      "attempt_id": "a015",
+      "task_id": "capability-conf-04",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "2d5fcab3a7d4ddfd997744ad472b3695cdc9c0cf89e659cd15140c362c1afef7",
+      "rubric_file_sha256": "55f2e0c75b3415d75816245163b6e6fc86255eced9558545be2e80cee7ea03cc",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 16,
+      "attempt_id": "a016",
+      "task_id": "capability-conf-04",
+      "family": "conflicts",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "2d5fcab3a7d4ddfd997744ad472b3695cdc9c0cf89e659cd15140c362c1afef7",
+      "rubric_file_sha256": "55f2e0c75b3415d75816245163b6e6fc86255eced9558545be2e80cee7ea03cc",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 17,
+      "attempt_id": "a017",
+      "task_id": "capability-time-01",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "f7ff4b788b66d476905376f471bf3920024a51cbf1f991addfe32c7e7771c47d",
+      "rubric_file_sha256": "64923f4a291c5a76aa7e68eb6f63357422b89ae337a929a18a5e4cf107afed33",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 18,
+      "attempt_id": "a018",
+      "task_id": "capability-time-01",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "f7ff4b788b66d476905376f471bf3920024a51cbf1f991addfe32c7e7771c47d",
+      "rubric_file_sha256": "64923f4a291c5a76aa7e68eb6f63357422b89ae337a929a18a5e4cf107afed33",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 19,
+      "attempt_id": "a019",
+      "task_id": "capability-time-02",
+      "family": "temporal_missing",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "4154cbc55d4b374273824e4b95094b56245d1668374f675ca5ed44b22d63ed9d",
+      "rubric_file_sha256": "31c229f0d2e045e830db0ad8e391165493053fe2d795bd6b11c9a0e2fc1745f0",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 20,
+      "attempt_id": "a020",
+      "task_id": "capability-time-02",
+      "family": "temporal_missing",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "4154cbc55d4b374273824e4b95094b56245d1668374f675ca5ed44b22d63ed9d",
+      "rubric_file_sha256": "31c229f0d2e045e830db0ad8e391165493053fe2d795bd6b11c9a0e2fc1745f0",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 21,
+      "attempt_id": "a021",
+      "task_id": "capability-time-03",
+      "family": "temporal_missing",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "cd41a647d89daa6043b768c4796b8cb16669425cc392af4daba54a8dd957f997",
+      "rubric_file_sha256": "207b99b791803652f4babaf27f9c94635a3106ddd1a84828db1072cd55ff676f",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 22,
+      "attempt_id": "a022",
+      "task_id": "capability-time-03",
+      "family": "temporal_missing",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "cd41a647d89daa6043b768c4796b8cb16669425cc392af4daba54a8dd957f997",
+      "rubric_file_sha256": "207b99b791803652f4babaf27f9c94635a3106ddd1a84828db1072cd55ff676f",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 23,
+      "attempt_id": "a023",
+      "task_id": "capability-time-04",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "e185c39b5916e0001bf9a4b7be2ef4a2c111646e504fd084354b06a9dc4f5822",
+      "rubric_file_sha256": "4f07737be463014b41216f029c11935b49cde7c81e81f5d22ae3c4a1e3b3aa20",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 24,
+      "attempt_id": "a024",
+      "task_id": "capability-time-04",
+      "family": "temporal_missing",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "e185c39b5916e0001bf9a4b7be2ef4a2c111646e504fd084354b06a9dc4f5822",
+      "rubric_file_sha256": "4f07737be463014b41216f029c11935b49cde7c81e81f5d22ae3c4a1e3b3aa20",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 25,
+      "attempt_id": "a025",
+      "task_id": "capability-scope-01",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "c080dbdc24e132876de4440716b1646fc678f6e69ae7591f0952c20e57e8d760",
+      "rubric_file_sha256": "ee2400b4d70dbe18a0c293007fbc919f50dad34a93a7d0d7602d9538bf87f6f7",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 26,
+      "attempt_id": "a026",
+      "task_id": "capability-scope-01",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "c080dbdc24e132876de4440716b1646fc678f6e69ae7591f0952c20e57e8d760",
+      "rubric_file_sha256": "ee2400b4d70dbe18a0c293007fbc919f50dad34a93a7d0d7602d9538bf87f6f7",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 27,
+      "attempt_id": "a027",
+      "task_id": "capability-scope-02",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "c32fd20ae5caa22f350222d868ed921dfceecef9038c869382bac92c9532a5d2",
+      "rubric_file_sha256": "65e87d8f4c36e5314d7dd30297b903ee56a8d09e4c31e970f89506c770e3c45a",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 28,
+      "attempt_id": "a028",
+      "task_id": "capability-scope-02",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "c32fd20ae5caa22f350222d868ed921dfceecef9038c869382bac92c9532a5d2",
+      "rubric_file_sha256": "65e87d8f4c36e5314d7dd30297b903ee56a8d09e4c31e970f89506c770e3c45a",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 29,
+      "attempt_id": "a029",
+      "task_id": "capability-scope-03",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "e5de29a66273f2dc705a4db77cda40b775ec7d2e9dbf046090526771c27e0052",
+      "rubric_file_sha256": "105efe9f091c26d4b036af81eb916197281466e78c55001f9cddcf7a6cd51f54",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 30,
+      "attempt_id": "a030",
+      "task_id": "capability-scope-03",
+      "family": "scope_injection",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "e5de29a66273f2dc705a4db77cda40b775ec7d2e9dbf046090526771c27e0052",
+      "rubric_file_sha256": "105efe9f091c26d4b036af81eb916197281466e78c55001f9cddcf7a6cd51f54",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 31,
+      "attempt_id": "a031",
+      "task_id": "capability-scope-04",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "93a171cfd55c1c64792145c3077522c98cbb7275d35aa79d7c3955680078dd6d",
+      "rubric_file_sha256": "22f65f87363dc02132908a9b81add49e0fde36a009f06d2232f90f55b613e134",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 32,
+      "attempt_id": "a032",
+      "task_id": "capability-scope-04",
+      "family": "scope_injection",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "93a171cfd55c1c64792145c3077522c98cbb7275d35aa79d7c3955680078dd6d",
+      "rubric_file_sha256": "22f65f87363dc02132908a9b81add49e0fde36a009f06d2232f90f55b613e134",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 33,
+      "attempt_id": "a033",
+      "task_id": "capability-revoke-01",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "6fa7d8e2410ec010cd4c6e723d0fefc88ef15ab5fc4c4d45df7167d8d97e7098",
+      "rubric_file_sha256": "333721b73e5192509fa3f61686e6066f6baf657559471f4a0a38ea4b21f0d973",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        },
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 34,
+      "attempt_id": "a034",
+      "task_id": "capability-revoke-01",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "6fa7d8e2410ec010cd4c6e723d0fefc88ef15ab5fc4c4d45df7167d8d97e7098",
+      "rubric_file_sha256": "333721b73e5192509fa3f61686e6066f6baf657559471f4a0a38ea4b21f0d973",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 35,
+      "attempt_id": "a035",
+      "task_id": "capability-revoke-02",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "65765b087c0761b9e9a64ee8cabb8a41a3b4e09c229bd8f9224d3ac158be3a6d",
+      "rubric_file_sha256": "72359c36a9e3d104412b7674096cccabdc770755ee81ed860023f3cd93916b1b",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        },
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 36,
+      "attempt_id": "a036",
+      "task_id": "capability-revoke-02",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "65765b087c0761b9e9a64ee8cabb8a41a3b4e09c229bd8f9224d3ac158be3a6d",
+      "rubric_file_sha256": "72359c36a9e3d104412b7674096cccabdc770755ee81ed860023f3cd93916b1b",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 37,
+      "attempt_id": "a037",
+      "task_id": "capability-revoke-03",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "e0d74a68a02e945c96befe244f05622afc5dbd86bcfdbc8d62341106751f353e",
+      "rubric_file_sha256": "32fb37c3d56162eba12e6c564719984d6cb54b323c5c13711c74c3989f360efe",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 38,
+      "attempt_id": "a038",
+      "task_id": "capability-revoke-03",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "e0d74a68a02e945c96befe244f05622afc5dbd86bcfdbc8d62341106751f353e",
+      "rubric_file_sha256": "32fb37c3d56162eba12e6c564719984d6cb54b323c5c13711c74c3989f360efe",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 39,
+      "attempt_id": "a039",
+      "task_id": "capability-revoke-04",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "8c1076e7db09e0924543caa01b92b267d39eabede2190d4ad0c80c0c01a4b091",
+      "rubric_file_sha256": "0ea3b1d1590e6c2ccccba2700d1f42cd7bf17ab67d526e54db6fbe0c77676e7c",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        },
+        {
+          "outcome": "failed",
+          "error": "source_state_changed"
+        },
+        {
+          "outcome": "needs_review",
+          "error": null
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 40,
+      "attempt_id": "a040",
+      "task_id": "capability-revoke-04",
+      "family": "revocation_replacement",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "8c1076e7db09e0924543caa01b92b267d39eabede2190d4ad0c80c0c01a4b091",
+      "rubric_file_sha256": "0ea3b1d1590e6c2ccccba2700d1f42cd7bf17ab67d526e54db6fbe0c77676e7c",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "budget_exhausted"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 41,
+      "attempt_id": "a041",
+      "task_id": "capability-budget-01",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "20e089c544346ed79dc7831a9de0969f3e3c576145614dc3da8fe62467bc338c",
+      "rubric_file_sha256": "5ed495bc9e0fa53e1264bb62fde4fcf0ced80a3b4e0a66e5e7334a9d72548941",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "gateway_authentication_required"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 42,
+      "attempt_id": "a042",
+      "task_id": "capability-budget-01",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "20e089c544346ed79dc7831a9de0969f3e3c576145614dc3da8fe62467bc338c",
+      "rubric_file_sha256": "5ed495bc9e0fa53e1264bb62fde4fcf0ced80a3b4e0a66e5e7334a9d72548941",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "gateway_authentication_required"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 43,
+      "attempt_id": "a043",
+      "task_id": "capability-budget-02",
+      "family": "budget_failure",
+      "principal": "sam",
+      "policy": "adaptive",
+      "input_file_sha256": "1c55a5f17a5f5014931c8cf79d81d73a3b2bf568db91a0ad260e1e9876d211e5",
+      "rubric_file_sha256": "be3d5dd8a3cd9f86fca277748768c1d86e552ed16b5a5b03db6e086f09e8f53c",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "gateway_rate_limited"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 44,
+      "attempt_id": "a044",
+      "task_id": "capability-budget-02",
+      "family": "budget_failure",
+      "principal": "sam",
+      "policy": "fixed",
+      "input_file_sha256": "1c55a5f17a5f5014931c8cf79d81d73a3b2bf568db91a0ad260e1e9876d211e5",
+      "rubric_file_sha256": "be3d5dd8a3cd9f86fca277748768c1d86e552ed16b5a5b03db6e086f09e8f53c",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "gateway_rate_limited"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 45,
+      "attempt_id": "a045",
+      "task_id": "capability-budget-03",
+      "family": "budget_failure",
+      "principal": "alex",
+      "policy": "adaptive",
+      "input_file_sha256": "65f64380474ceab00960fe77b7b1477099f9d81e490314c10375906ffc27b0f8",
+      "rubric_file_sha256": "a44926a56755e1a74dd6cdfd739536250042db0f748ec0db2103542058890ab9",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "invalid_memo"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 46,
+      "attempt_id": "a046",
+      "task_id": "capability-budget-03",
+      "family": "budget_failure",
+      "principal": "alex",
+      "policy": "fixed",
+      "input_file_sha256": "65f64380474ceab00960fe77b7b1477099f9d81e490314c10375906ffc27b0f8",
+      "rubric_file_sha256": "a44926a56755e1a74dd6cdfd739536250042db0f748ec0db2103542058890ab9",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "failed",
+          "error": "invalid_memo"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 47,
+      "attempt_id": "a047",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_file_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_file_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    },
+    {
+      "split": "capability",
+      "ordinal": 48,
+      "attempt_id": "a048",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_file_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_file_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "operational_hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "accounting_state": "unexecuted",
+      "semantic_judgments": null
+    }
+  ],
+  "meaning_quality_uplift": null,
+  "semantic_review_status": "pending_independent_manual"
+}

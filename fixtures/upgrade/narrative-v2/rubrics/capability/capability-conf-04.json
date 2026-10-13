@@ -1,0 +1,240 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-conf-04",
+  "input_sha256": "6cf77195d7058b93aaa21dd46c3a9890309b1bac7a685ab1409049ad8983c020",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "conflict",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-conf-04-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone120; archive tier R120 is excluded.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone120; archive tier R120 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "2a94e5acc9c6f2bebc7c48cc0004ad5e181598c874c8a9635b2615df7570675f",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate20 only after certificate R120 is approved.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate20 only after certificate R120 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "2d3b850ce2de0e340a9baf52c262a8ded1b2ec88cbf44b825f587b233ca94008",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 31 business days after approval R120.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 31 business days after approval R120.",
+      "temporal_role": "current",
+      "semantic_signature": "d6121d0a80acfdacde1c617db9e0f5ae1b2b92777e0479c9197261b371757f49",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 30 minutes for incident class R120.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 30 minutes for incident class R120.",
+      "temporal_role": "current",
+      "semantic_signature": "34bf56d3fd2d7e6bbc6d2b38d9fc0da39f2b0bc0a3295568d9729e5a3d172a1b",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R120 and the designated reviewer.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R120 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "96ad06d03de3af674b2a252ee45857c60c7d84b472ef6c8813b0f21203959da1",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R120 before the rehearsal.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R120 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "373f07444a53ba92719b5725db8a59113ca27e2fd589f7385847c7f7b760306d",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R120 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-primary",
+      "revision": "1",
+      "content_sha256": "aa61a33e2d2cda22c61cddd69bd861bde7e7d2e83bfe6a0f2fa1b26c4dd264fc",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R120 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "e796c1988cd5c159857b3607ee5e2eb64f64526218c11ba570bd365173eb48d9",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R120 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-04-peer",
+      "revision": "1",
+      "content_sha256": "2b802ddf8827342cbd787a63b30168342cad863d4f2be57beb0055bd6d8af54b",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R120 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "3dbc8ca07930a02879344a6d973d11999bdae7e917cece0e602d51ed216c58ad",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R120 requires finance concurrence. CAPABILITY_CONF_04_DENIED",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-private",
+      "revision": "1",
+      "content_sha256": "7c9fe0e28cc7cf02d2650ad461894c12fd38c8698db78f4c37853b48068c5174",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R120 requires finance concurrence. CAPABILITY_CONF_04_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "e430d73e9ce039b59118179944424fbafaa8cf51d12b7273a2556fc859c66ac5",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f10",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone820; archive tier R120 is excluded.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-04-conflicting-current",
+      "revision": "1",
+      "content_sha256": "7e820a3ad52a302a51bd96e0a949363469d24ad95d93ec67310db2315dea8606",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone820; archive tier R120 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "55c1ed04f9da32451942efdbfb38920cf9eb6cac8213363261e4807ee7089115",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-04-f11",
+      "topic": "support_hours",
+      "required_summary": "Legacy incident class R120 used a 110-minute target.",
+      "qualifiers": [
+        "R120"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-04-old-note",
+      "revision": "1",
+      "content_sha256": "6c309bc9c4e825933e43cba7c4f7683777b8a30ca7bae3dad8622d3ca7d0c100",
+      "start": 0,
+      "end": 67,
+      "quote": "support_hours: Legacy incident class R120 used a 110-minute target.",
+      "temporal_role": "stale",
+      "semantic_signature": "9d847b0eacdafdc0aa6b3cda24fe531f5f65c59bb475a19794b18028a95bd2e7",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_CONF_04_DENIED": "capability-conf-04-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-conf-04",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

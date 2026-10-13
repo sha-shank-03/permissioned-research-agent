@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-time-03",
+  "split": "capability",
+  "family": "temporal_missing",
+  "principal": "alex",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-time-03",
+    "vendor": "WillowPoint",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-time-03-future",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "WillowPoint",
+        "title": "WillowPoint future R123",
+        "body": "hosting_region: Primary records stay in synthetic Zone123; archive tier R123 is excluded.\n",
+        "effective_at": "2026-11-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-time-03-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "WillowPoint",
+        "title": "WillowPoint primary R123",
+        "body": "sso: Federation uses Gate23 only after certificate R123 is approved.\nonboarding_days: Standard onboarding takes 34 business days after approval R123.\nsupport_hours: Priority response is within 33 minutes for incident class R123.\nconditions: Activation requires signed schedule R123 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R123 before the rehearsal.\nexceptions: Custom migration package R123 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-time-03-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "WillowPoint",
+        "title": "WillowPoint peer R123",
+        "body": "conditions: Approval witness R123 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-time-03-general"
+      },
+      {
+        "object_id": "capability-time-03-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "WillowPoint",
+        "title": "WillowPoint private R123",
+        "body": "dependencies: Procurement ticket R123 requires finance concurrence. CAPABILITY_TIME_03_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-03",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-qual-03",
+  "split": "capability",
+  "family": "qualifiers_dependencies",
+  "principal": "alex",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-qual-03",
+    "vendor": "OchreLanding",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-qual-03-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "OchreLanding",
+        "title": "OchreLanding primary R115",
+        "body": "hosting_region: Primary records stay in synthetic Zone115; archive tier R115 is excluded.\nsso: Federation uses Gate15 only after certificate R115 is approved.\nonboarding_days: Standard onboarding takes 26 business days after approval R115.\nsupport_hours: Priority response is within 25 minutes for incident class R115.\nconditions: Activation requires signed schedule R115 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R115 before the rehearsal.\nexceptions: Custom migration package R115 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-qual-03-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "OchreLanding",
+        "title": "OchreLanding peer R115",
+        "body": "conditions: Approval witness R115 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-qual-03-general"
+      },
+      {
+        "object_id": "capability-qual-03-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "OchreLanding",
+        "title": "OchreLanding private R115",
+        "body": "dependencies: Procurement ticket R115 requires finance concurrence. CAPABILITY_QUAL_03_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      },
+      {
+        "object_id": "capability-qual-03-exception",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "OchreLanding",
+        "title": "OchreLanding exception R115",
+        "body": "exceptions: Only deployment ring R115 may postpone the rehearsal; customer acceptance is still required.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-qual-03",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

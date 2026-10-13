@@ -1,0 +1,188 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-time-02",
+  "input_sha256": "8546f92d12e4f6b4738f6336a1ee1bbaeb5693a2afebb7cdf8ac8df62088e63d",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "unknown",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-time-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone106; archive tier R106 is excluded.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": true,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone106; archive tier R106 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "84fbe140759a14e99024190c59af395c0f32ce07bd36948248557ee6b525c444",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f02",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 17 business days after approval R106.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": true,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 90,
+      "end": 170,
+      "quote": "onboarding_days: Standard onboarding takes 17 business days after approval R106.",
+      "temporal_role": "current",
+      "semantic_signature": "bec50bcc301ac2b4f6734fc576595652a66584aa8ce96cdf0685c13524d284cd",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f03",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 16 minutes for incident class R106.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": false,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 171,
+      "end": 249,
+      "quote": "support_hours: Priority response is within 16 minutes for incident class R106.",
+      "temporal_role": "current",
+      "semantic_signature": "b9cbfd2114dfb8482166480f9fd70766a4581f06892efe806f92bbd81b37cb11",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f04",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R106 and the designated reviewer.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": true,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 250,
+      "end": 331,
+      "quote": "conditions: Activation requires signed schedule R106 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "a98e768bb9ee47dda423bc1391dbcc1fb76c9b1e33f3af336f60f6f90f4fb3cb",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f05",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R106 before the rehearsal.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": false,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 332,
+      "end": 421,
+      "quote": "dependencies: The import stage depends on completing checklist R106 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "ccbaba73226c080c316f812a4af96cc4403a65e3b732ceed7385e5bd8815fde6",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f06",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R106 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": false,
+      "source_id": "development-time-02-primary",
+      "revision": "1",
+      "content_sha256": "aea428fccb6a13e82d041d52c6bbb4dbe127c30ce2e3510e8b8f9a535a21a4a0",
+      "start": 422,
+      "end": 508,
+      "quote": "exceptions: Custom migration package R106 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "6cef498a45b5b483286956a01fdd737312bb8db3dbac1d6dda6028129c994a42",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f07",
+      "topic": "conditions",
+      "required_summary": "Approval witness R106 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": true,
+      "source_id": "development-time-02-peer",
+      "revision": "1",
+      "content_sha256": "6e91cd1bbfc79f8ec655285cc6cee32c691cf753ec4b7f2c99469cffd0137bc7",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R106 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "516b182de85c8af807f28dfcdb82a8eafead49226e98e7b77e806e54bfd47282",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-time-02-f08",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R106 requires finance concurrence. DEVELOPMENT_TIME_02_DENIED",
+      "qualifiers": [
+        "R106"
+      ],
+      "critical": false,
+      "source_id": "development-time-02-private",
+      "revision": "1",
+      "content_sha256": "197b4d5fd75a7487134d7639cb987b2c6959da90f1ba30094c8250811a83836d",
+      "start": 0,
+      "end": 94,
+      "quote": "dependencies: Procurement ticket R106 requires finance concurrence. DEVELOPMENT_TIME_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "6ed1414444974d4e60347d4e2c31535249e1784f850585c2819cc76a6b618cd5",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [
+    "DEVELOPMENT_TIME_02_DENIED"
+  ],
+  "private_marker_sources": {
+    "DEVELOPMENT_TIME_02_DENIED": "development-time-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-time-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

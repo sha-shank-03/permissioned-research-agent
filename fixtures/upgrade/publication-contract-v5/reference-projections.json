@@ -1,0 +1,71 @@
+{
+  "schema": "public-contract-projections-v5",
+  "provenance": "Selected nonsecret accounting fields from existing main receipts; full receipt bytes remain private; projections are not hash-equivalent receipts or new evaluation evidence.",
+  "new_native_attempts": 0,
+  "semantic_quality": null,
+  "entries": [
+    {
+      "private_source_sha256": "8c1422c54d7cb029a025ea2286066896c872f5872959c508b04f8c7971881f20",
+      "is_full_receipt": false,
+      "purpose": "public redacted shape projection, not private receipt hash verification",
+      "data": {
+        "status": "partial_accounting_verified_main_resource_interruption_continuation_blocked",
+        "raw_partial_inventory": {
+          "journal.jsonl": "eeeeb049b4781463647ff674cc6ef7f4e4ac2ea876d765b785bf8f05af3ffb85",
+          "plan.json": "044d1af25662a2deb5581106a52caa2860b5f6a0296a5c33ea1855714bc29d57",
+          "run.claim.json": "a11add929b6e5fca829cd68934ca18233471fe073593bdd999d84e38f56b0640",
+          "s001.execution.json": "c92523d4358fa39267a7d20106ea7401842faf2890306acbcff53735d81f8648",
+          "writer.lock": "77c2cbc5e486e6355cb740a5972eb53abf8760ff4be50f6ac313361148ed2af5",
+          "s001/corpus.sqlite": "0eaea8dde78bbec0560bd99912974bc674b577896505be56fa73a899ba4b5f0f"
+        },
+        "logical_counts": {
+          "intended": 72,
+          "interrupted_unknown": 1,
+          "terminal": 69,
+          "unexecuted": 2
+        },
+        "physical_intention_records": 75
+      }
+    },
+    {
+      "private_source_sha256": "611ae292d0b75e21e5754fd4e45633bc6249fa60b42965052d2746be8b77df9a",
+      "is_full_receipt": false,
+      "purpose": "public redacted shape projection, not private receipt hash verification",
+      "data": {
+        "dispatch_authorized": false,
+        "logical_original_slots": {
+          "intended": 72,
+          "interrupted_unknown": 1,
+          "terminal": 69,
+          "unexecuted": 2
+        },
+        "physical_intent_records": 75,
+        "supplement": {
+          "execution_source_manifest_sha256": "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+          "intended": 3,
+          "intended_complete": true,
+          "interrupted_unknown": 1,
+          "journal_sha256": "eeeeb049b4781463647ff674cc6ef7f4e4ac2ea876d765b785bf8f05af3ffb85",
+          "persisted_intention_records": 3,
+          "plan_sha256": "044d1af25662a2deb5581106a52caa2860b5f6a0296a5c33ea1855714bc29d57",
+          "terminal": 0,
+          "unexecuted": 2
+        }
+      }
+    },
+    {
+      "private_source_sha256": "f600fbb77e62d17ae851feb29cb34add3b6dfe24d394ff75f32d7ecf5eb6179b",
+      "is_full_receipt": false,
+      "purpose": "public redacted shape projection, not private receipt hash verification",
+      "data": {
+        "commands": [
+          {
+            "id": "run",
+            "exit_code": 15,
+            "limit_exceeded": "process_or_listener_cap"
+          }
+        ]
+      }
+    }
+  ]
+}

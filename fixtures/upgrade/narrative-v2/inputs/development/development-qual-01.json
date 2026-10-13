@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "development-qual-01",
+  "split": "development",
+  "family": "qualifiers_dependencies",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "development-qual-01",
+    "vendor": "AsterVale",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "development-qual-01-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "AsterVale",
+        "title": "AsterVale primary R101",
+        "body": "hosting_region: Primary records stay in synthetic Zone101; archive tier R101 is excluded.\nsso: Federation uses Gate1 only after certificate R101 is approved.\nonboarding_days: Standard onboarding takes 12 business days after approval R101.\nsupport_hours: Priority response is within 11 minutes for incident class R101.\nconditions: Activation requires signed schedule R101 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R101 before the rehearsal.\nexceptions: Custom migration package R101 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "development-qual-01-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "AsterVale",
+        "title": "AsterVale peer R101",
+        "body": "conditions: Approval witness R101 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "development-qual-01-general"
+      },
+      {
+        "object_id": "development-qual-01-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "AsterVale",
+        "title": "AsterVale private R101",
+        "body": "dependencies: Procurement ticket R101 requires finance concurrence. DEVELOPMENT_QUAL_01_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      },
+      {
+        "object_id": "development-qual-01-exception",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "AsterVale",
+        "title": "AsterVale exception R101",
+        "body": "exceptions: Only deployment ring R101 may postpone the rehearsal; customer acceptance is still required.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-qual-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

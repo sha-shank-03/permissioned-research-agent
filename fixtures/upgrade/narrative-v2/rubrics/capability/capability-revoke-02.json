@@ -1,0 +1,332 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-revoke-02",
+  "input_sha256": "9e4a864827962cdaa34449c644f827e5e0f2ecf4639c00f0421fecee4105fbd8",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-revoke-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone130; archive tier R130 is excluded.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone130; archive tier R130 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "7b5d7be80ecf3358b95fcc43bb5988d206f6c5f46e29af721c537779b32a1620",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate30 only after certificate R130 is approved.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate30 only after certificate R130 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "c7f59fa2714c66fbf9de6db0a322d73c6e3392ffef9c529732a2066f46a569c6",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 41 business days after approval R130.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 41 business days after approval R130.",
+      "temporal_role": "current",
+      "semantic_signature": "a5bfb795dff8887e8396eaf441a26a13f74d4a38f2de3341a27f0397cfa36216",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 40 minutes for incident class R130.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 40 minutes for incident class R130.",
+      "temporal_role": "current",
+      "semantic_signature": "52592f4db02fed18b6cb439e5b6ede937e6c41704311733802c26aec11b3e9cc",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R130 and the designated reviewer.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R130 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "ec453475bbc1814b58a1b640626b736ba0a42a1a0d1900a436d2629399c9c2b8",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R130 before the rehearsal.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R130 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "9341a00deabbb22861449f88a4d01e7a3bf9ce903a2613a52b3828fbbea05685",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R130 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "64818c535e11722ed8b4a0a4b1659585282f25cd8706ce0f01ab61aaf75ddd23",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R130 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "87bdb3c69e4b3929f40fe7895a3446568a41d090bca9cba39fe8e6adb20b0979",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R130 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-peer",
+      "revision": "1",
+      "content_sha256": "616dd7e46af11a9e7c2698df39daeda4beaf6be9703df1b60c2441ed1a2dd144",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R130 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "9c0ca621e05bf9e51ea9ee159751ac83698cb39eb0d1a4114f7c69217982fa17",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R130 requires finance concurrence. CAPABILITY_REVOKE_02_DENIED",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-private",
+      "revision": "1",
+      "content_sha256": "236c6334a18bc024a1a40a34f7cf5cd449204d4766ce80faf39c126edcced560",
+      "start": 0,
+      "end": 95,
+      "quote": "dependencies: Procurement ticket R130 requires finance concurrence. CAPABILITY_REVOKE_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "cf20be189566024285cb38ea9c56ab4f313588d132cb8c9a0163a9dd71125011",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-hosting_region",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone130; archive tier R130 is excluded.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone130; archive tier R130 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "7b5d7be80ecf3358b95fcc43bb5988d206f6c5f46e29af721c537779b32a1620",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-sso",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate30 only after certificate R130 is approved.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate30 only after certificate R130 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "c7f59fa2714c66fbf9de6db0a322d73c6e3392ffef9c529732a2066f46a569c6",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-onboarding_days",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 91 business days after approval R130.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 91 business days after approval R130.",
+      "temporal_role": "current",
+      "semantic_signature": "a81c3f6aeabc51c00eaaeb2b2dd6b6579a89cd057993f6501471c1f3e55e90fe",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-support_hours",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 40 minutes for incident class R130.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 40 minutes for incident class R130.",
+      "temporal_role": "current",
+      "semantic_signature": "52592f4db02fed18b6cb439e5b6ede937e6c41704311733802c26aec11b3e9cc",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-conditions",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R130 and the designated reviewer.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": true,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R130 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "ec453475bbc1814b58a1b640626b736ba0a42a1a0d1900a436d2629399c9c2b8",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-dependencies",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R130 before the rehearsal.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R130 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "9341a00deabbb22861449f88a4d01e7a3bf9ce903a2613a52b3828fbbea05685",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-revoke-02-replacement-exceptions",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R130 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R130"
+      ],
+      "critical": false,
+      "source_id": "capability-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "b184c185dfd707367d50b3311e7b5a3dbeea32991462255ae380d3cff1f3ebf8",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R130 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "87bdb3c69e4b3929f40fe7895a3446568a41d090bca9cba39fe8e6adb20b0979",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [
+    "capability-revoke-02-event1"
+  ],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_REVOKE_02_DENIED": "capability-revoke-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-revoke-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

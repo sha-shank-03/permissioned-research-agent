@@ -1,0 +1,206 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-time-03",
+  "input_sha256": "6b8754b59aef9c8b180f9be48568723b1bf59face29adfbd407aadee837b2732",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "unknown",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-time-03-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone123; archive tier R123 is excluded.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": true,
+      "source_id": "capability-time-03-future",
+      "revision": "1",
+      "content_sha256": "c7e57bd766e271e85fb874f9746b940204bc1f28da9efe47a7b5cf3f80e80ade",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone123; archive tier R123 is excluded.",
+      "temporal_role": "future",
+      "semantic_signature": "b3d9d645429be3366ac70b5db5b96f6a82741c0ec4e9d0d96e2b59be3faa16b3",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate23 only after certificate R123 is approved.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": false,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 0,
+      "end": 68,
+      "quote": "sso: Federation uses Gate23 only after certificate R123 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "b8946c81c6faeac8a9ec4bad9e1f24e9831ab46f6c0e3ac8463fc297679f3fa0",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 34 business days after approval R123.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": true,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 69,
+      "end": 149,
+      "quote": "onboarding_days: Standard onboarding takes 34 business days after approval R123.",
+      "temporal_role": "current",
+      "semantic_signature": "3827bae6fb4bdc23f78fcdab43d1e061e897f4af28cf6092bd387180cb580d16",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 33 minutes for incident class R123.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": false,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 150,
+      "end": 228,
+      "quote": "support_hours: Priority response is within 33 minutes for incident class R123.",
+      "temporal_role": "current",
+      "semantic_signature": "eb22b3a39e8908f3bc52347094a30c117875a1031e63a661cf8d08676d80fbc5",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R123 and the designated reviewer.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": true,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 229,
+      "end": 310,
+      "quote": "conditions: Activation requires signed schedule R123 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "05bef33ddd15981455977a2be21e6a9807fa4f51ce6a0bbb708bd6d4ca42f895",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R123 before the rehearsal.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": false,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 311,
+      "end": 400,
+      "quote": "dependencies: The import stage depends on completing checklist R123 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "5500bf0e57930d5511b51a324ef74a61082fcd80442ee8506e6dd60e481b2e4a",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R123 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": false,
+      "source_id": "capability-time-03-primary",
+      "revision": "1",
+      "content_sha256": "135af8735e2322e3e7a3613aaa991f9dd6552c5a877634c758a78c29be31e8cb",
+      "start": 401,
+      "end": 487,
+      "quote": "exceptions: Custom migration package R123 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "a12dacad0cd19aa1d4a85cff57ae8f8cb78288d178c93f51dfe547b33ee1abb9",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R123 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": true,
+      "source_id": "capability-time-03-peer",
+      "revision": "1",
+      "content_sha256": "4e3461a900294953e8707262d4b734bec23d7f03d9b32c70911b189ec2edd4ce",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R123 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "94bc55fee7769da5da3683efe20de4213880815957a0120dab957ee4b39f7f6b",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-03-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R123 requires finance concurrence. CAPABILITY_TIME_03_DENIED",
+      "qualifiers": [
+        "R123"
+      ],
+      "critical": false,
+      "source_id": "capability-time-03-private",
+      "revision": "1",
+      "content_sha256": "ded4b3a3caced321c73e2f9f5738e2c1ae1cf57377ce84638a59de74ce57e5bd",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R123 requires finance concurrence. CAPABILITY_TIME_03_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "cdd208f85454a9314999fa190f32b91d5e7e03a30b3387c84ddf4ab68fba011b",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [
+    "CAPABILITY_TIME_03_DENIED"
+  ],
+  "private_marker_sources": {
+    "CAPABILITY_TIME_03_DENIED": "capability-time-03-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-03",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

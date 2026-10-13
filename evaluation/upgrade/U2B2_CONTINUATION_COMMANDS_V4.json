@@ -1,0 +1,204 @@
+{
+  "schema": "narrative-continuation-commands-v4",
+  "state": "source_pure_ready_pending_main_review",
+  "execution_source_manifest": {
+    "path": "evaluation/upgrade/U2B2_CONTINUATION_SOURCE_MANIFEST_V4.json",
+    "sha256": "929607e2288683f972dbd6cc47046ca946b40768325911232ba95d01c01958f8"
+  },
+  "excluded_from_execution_seal_for_acyclic_hashing": true,
+  "independent_command_pin_required": true,
+  "proposal": {
+    "path": "evaluation/upgrade/U2B2_CONTINUATION_V4.json",
+    "sha256": "efd663a93b987dede64369690aa01503b8ba6defb2e0ee008df68c690729cfab"
+  },
+  "checkpoint": {
+    "path": "fixtures/upgrade/narrative-continuation-v4/partial-checkpoint.json",
+    "sha256": "ba6dd42d75da40b4c55484bc38659ffc72b41195c84767fca0c5eee7a03c1bfe"
+  },
+  "native_authorized": false,
+  "lease_label_is_not_authorization": true,
+  "resource_proposal_worker_file": "U2B2_V4_RESOURCE_PROPOSAL_001.json",
+  "resource_proposal_sha256": "3be3232b8137c2d8779f53b137189a98df46e20d047208ed8832dec7b477b923",
+  "process_counts_and_roles_validated": false,
+  "concrete_descendant_cap": null,
+  "concrete_python_cap_including_recorder": null,
+  "main_corrected_recorder_and_resolved_argv_freeze_required": true,
+  "fixed_output_relative_root": "work/main-u2b2-continuation-v4",
+  "preserved_parent_relative_root": "work/main-u2b2-supplement-v3",
+  "mappings": [
+    {
+      "id": "c001",
+      "prior_supplement_id": "s002",
+      "original_slot": "a047"
+    },
+    {
+      "id": "c002",
+      "prior_supplement_id": "s003",
+      "original_slot": "a048"
+    }
+  ],
+  "retained_unknown": {
+    "supplement": "s001",
+    "original": "a046",
+    "domain_outcome": null,
+    "provider_requests": null
+  },
+  "logical_before": {
+    "intended": 72,
+    "terminal": 69,
+    "interrupted_unknown": 1,
+    "unexecuted": 2
+  },
+  "physical_before": 75,
+  "physical_intentions_after_prepare": 77,
+  "logical_after_two_terminals": {
+    "intended": 72,
+    "terminal": 71,
+    "interrupted_unknown": 1,
+    "unexecuted": 0
+  },
+  "aliases_are_independent_samples": false,
+  "limits": {
+    "run_seconds": 520,
+    "slot_seconds": 120,
+    "raw_output_bytes": 67108864,
+    "slot_reserve_bytes": 6291456,
+    "working_ram_mib": 512,
+    "downloads": 0,
+    "external_calls": 0,
+    "live_model_calls": 0
+  },
+  "outputs": [
+    "plan.json",
+    "journal.jsonl",
+    "run.claim.json",
+    "c001.execution.json",
+    "c001.returned.json",
+    "c001.usage.json",
+    "c002.execution.json",
+    "c002.returned.json",
+    "c002.usage.json",
+    "c001/report.json",
+    "c001/trace.json",
+    "c001/corpus.sqlite",
+    "c002/report.json",
+    "c002/trace.json",
+    "c002/corpus.sqlite"
+  ],
+  "no_existing_source_or_evidence_writes": true,
+  "no_recovery_replay_or_partial_resume": true,
+  "semantic_quality": null,
+  "aggregate_full_plan_safety": null,
+  "actual_cost": null,
+  "commands": [
+    {
+      "id": "verify-source",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_continuation_v4",
+        "verify-source",
+        "--source-sha256",
+        "929607e2288683f972dbd6cc47046ca946b40768325911232ba95d01c01958f8",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-continuation-v4"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_source_and_resource_review_and_named_lease": false,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": null
+    },
+    {
+      "id": "prepare",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_continuation_v4",
+        "prepare",
+        "--source-sha256",
+        "929607e2288683f972dbd6cc47046ca946b40768325911232ba95d01c01958f8",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-continuation-v4",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_source_and_resource_review_and_named_lease": true,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": 2
+    },
+    {
+      "id": "run",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_continuation_v4",
+        "run",
+        "--source-sha256",
+        "929607e2288683f972dbd6cc47046ca946b40768325911232ba95d01c01958f8",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-continuation-v4",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_source_and_resource_review_and_named_lease": true,
+      "actor_runs": 2,
+      "unexpected_or_incomplete_exit": 2
+    },
+    {
+      "id": "report",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_continuation_v4",
+        "report",
+        "--source-sha256",
+        "929607e2288683f972dbd6cc47046ca946b40768325911232ba95d01c01958f8",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-continuation-v4"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_source_and_resource_review_and_named_lease": false,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": null
+    }
+  ],
+  "pure_verification_argv": [
+    "py",
+    "-3.11",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_upgrade_narrative_continuation_v4_pure",
+    "-v"
+  ]
+}

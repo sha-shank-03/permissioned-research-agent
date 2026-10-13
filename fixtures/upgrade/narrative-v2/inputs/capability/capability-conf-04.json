@@ -1,0 +1,112 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-conf-04",
+  "split": "capability",
+  "family": "conflicts",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-conf-04",
+    "vendor": "TopazGarden",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-conf-04-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "TopazGarden",
+        "title": "TopazGarden primary R120",
+        "body": "hosting_region: Primary records stay in synthetic Zone120; archive tier R120 is excluded.\nsso: Federation uses Gate20 only after certificate R120 is approved.\nonboarding_days: Standard onboarding takes 31 business days after approval R120.\nsupport_hours: Priority response is within 30 minutes for incident class R120.\nconditions: Activation requires signed schedule R120 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R120 before the rehearsal.\nexceptions: Custom migration package R120 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-conf-04-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "TopazGarden",
+        "title": "TopazGarden peer R120",
+        "body": "conditions: Approval witness R120 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-conf-04-general"
+      },
+      {
+        "object_id": "capability-conf-04-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "TopazGarden",
+        "title": "TopazGarden private R120",
+        "body": "dependencies: Procurement ticket R120 requires finance concurrence. CAPABILITY_CONF_04_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      },
+      {
+        "object_id": "capability-conf-04-conflicting-current",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "TopazGarden",
+        "title": "TopazGarden conflicting current R120",
+        "body": "hosting_region: Primary records stay in synthetic Zone820; archive tier R120 is excluded.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-conf-04-general"
+      },
+      {
+        "object_id": "capability-conf-04-old-note",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "TopazGarden",
+        "title": "TopazGarden old note R120",
+        "body": "support_hours: Legacy incident class R120 used a 110-minute target.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2026-10-01",
+        "allow_groups": [
+          "employees"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-conf-04",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

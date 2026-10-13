@@ -1,0 +1,222 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-conf-01",
+  "input_sha256": "69e4c148644c7e20768e000abc5caad7c564ae5590343fe4740af05d19abece4",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "conflict",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-conf-01-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone117; archive tier R117 is excluded.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone117; archive tier R117 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "f34488e53ecca13cc0d9106dc473871afe471bb7af749854f892890852a2f245",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate17 only after certificate R117 is approved.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate17 only after certificate R117 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "c3eb8dc8e851eb77e6f2a1c948ed05544082c9c51140482e40b09b9e8960e081",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 28 business days after approval R117.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 28 business days after approval R117.",
+      "temporal_role": "current",
+      "semantic_signature": "4277246b9eea686ae0b872e31d7c994bf653552248e8683a1ce932758f42a612",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 27 minutes for incident class R117.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 27 minutes for incident class R117.",
+      "temporal_role": "current",
+      "semantic_signature": "a5c86f72a4b0f6c504f18badfb8025991f4a45b6ce22a797eb6f19789858d096",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R117 and the designated reviewer.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R117 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "bde7062e9f940aacbf6c47692bd1a667e1f491108e20d6537f148b21e88dd5ef",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R117 before the rehearsal.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R117 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "9ba209ff99b507236e2c3213ad815b01a3970e9775f69a28e7f80954cda7cb83",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R117 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-01-primary",
+      "revision": "1",
+      "content_sha256": "61336565278866e403b7018b5025d1b6de467bd05872c040771de6882f51bb79",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R117 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "d243a33f9e294e4d6b7539e1d778d565aadd5a60d885049a321f796093a57a2e",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R117 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-01-peer",
+      "revision": "1",
+      "content_sha256": "edaedefd41fc2a3d9fc2d7eca0f478405614fb2501d6979cf2f67f7be3a1ac4f",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R117 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "88a28d1837e4f77f7ad85dd39ca904ff060eee9ed1f0cb27dfec59d2993bebef",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R117 requires finance concurrence. CAPABILITY_CONF_01_DENIED",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": false,
+      "source_id": "capability-conf-01-private",
+      "revision": "1",
+      "content_sha256": "4dd3ed6fca1f708e31f2c3b9fc3ac3354fc850faf6d5c871c16364fc48170211",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R117 requires finance concurrence. CAPABILITY_CONF_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "a67afb4298560817c6df9f7d49ae180fef7f65f8b3a07f61de848f310f4e66f0",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-conf-01-f10",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone817; archive tier R117 is excluded.",
+      "qualifiers": [
+        "R117"
+      ],
+      "critical": true,
+      "source_id": "capability-conf-01-conflicting-current",
+      "revision": "1",
+      "content_sha256": "c59624565ed06e4b3bb60be5f14e7b1eb9bb813beafadf43b9d12ba3a5b2cad9",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone817; archive tier R117 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "a7e1fccfba138c11403e810bff7be8c5c5eb5a0b0c45805f637bd90bcc02d166",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_CONF_01_DENIED": "capability-conf-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-conf-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "development-budget-01",
+  "split": "development",
+  "family": "budget_failure",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "development-budget-01",
+    "vendor": "KestrelDell",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "development-budget-01-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "KestrelDell",
+        "title": "KestrelDell primary R111",
+        "body": "hosting_region: Primary records stay in synthetic Zone111; archive tier R111 is excluded.\nsso: Federation uses Gate11 only after certificate R111 is approved.\nonboarding_days: Standard onboarding takes 22 business days after approval R111.\nsupport_hours: Priority response is within 21 minutes for incident class R111.\nconditions: Activation requires signed schedule R111 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R111 before the rehearsal.\nexceptions: Custom migration package R111 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "development-budget-01-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "KestrelDell",
+        "title": "KestrelDell peer R111",
+        "body": "conditions: Approval witness R111 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "development-budget-01-general"
+      },
+      {
+        "object_id": "development-budget-01-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "KestrelDell",
+        "title": "KestrelDell private R111",
+        "body": "dependencies: Procurement ticket R111 requires finance concurrence. DEVELOPMENT_BUDGET_01_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {
+      "max_requests": 2
+    }
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-budget-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-scope-02",
+  "input_sha256": "3ae814b7b4e5d3b37b29efc9ede5a884a5c022dd98aecc9e17c4c94f84328e0a",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-scope-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone108; archive tier R108 is excluded.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": true,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone108; archive tier R108 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "6373dfdccc05507e7fd80e1230b56b39bd03d0bafac298fc6efa51e6c5b81065",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate8 only after certificate R108 is approved.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": false,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 90,
+      "end": 157,
+      "quote": "sso: Federation uses Gate8 only after certificate R108 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "ddb5db60c3c600204086163f52be76908f9124609276354b5e39c645cc2e5298",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 19 business days after approval R108.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": true,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 158,
+      "end": 238,
+      "quote": "onboarding_days: Standard onboarding takes 19 business days after approval R108.",
+      "temporal_role": "current",
+      "semantic_signature": "5f855a6f2a0475d729a1fd703c4508a3ab158e0da5907d8a5052aebb5f37be80",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 18 minutes for incident class R108.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": false,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 239,
+      "end": 317,
+      "quote": "support_hours: Priority response is within 18 minutes for incident class R108.",
+      "temporal_role": "current",
+      "semantic_signature": "01db5c2cb4a0b3b30b42e67243ff82dec13c2ad90b01384ee60de733d12908bb",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R108 and the designated reviewer.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": true,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 318,
+      "end": 399,
+      "quote": "conditions: Activation requires signed schedule R108 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "7d4df03458ed8080587500a60227138f7b9d35c3616f798ab8606283e9122340",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R108 before the rehearsal.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": false,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 400,
+      "end": 489,
+      "quote": "dependencies: The import stage depends on completing checklist R108 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "d3254eccf3399d572a47f480ec3340dccfb1e0fd2a7a9021d0586790593bc82b",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R108 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": false,
+      "source_id": "development-scope-02-primary",
+      "revision": "1",
+      "content_sha256": "de840e8b87bf6e6a553a8f9e156565150fb96aa2fc8fc08ec0c249f367f89152",
+      "start": 490,
+      "end": 576,
+      "quote": "exceptions: Custom migration package R108 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "72509cd79e72735cb69a09a02c4490968fd941eccdf432c71aa8fbda0c5381c6",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R108 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": true,
+      "source_id": "development-scope-02-peer",
+      "revision": "1",
+      "content_sha256": "b430587e41ac8b1288ca23c86a0c5494a3d34aa21fca52ac74cb1b5a809fd2ee",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R108 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "e4d82907213f1865602118428a947c267e4850b26c735bb046bb81f48a3f9536",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-scope-02-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R108 requires finance concurrence. DEVELOPMENT_SCOPE_02_DENIED",
+      "qualifiers": [
+        "R108"
+      ],
+      "critical": false,
+      "source_id": "development-scope-02-private",
+      "revision": "1",
+      "content_sha256": "822179076bb7e0a4c78c560bb8e20563f813b10aed6c9a7b3a1a81c574d42300",
+      "start": 0,
+      "end": 95,
+      "quote": "dependencies: Procurement ticket R108 requires finance concurrence. DEVELOPMENT_SCOPE_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "205fb3d26cd130d3bf3a3d83d6902f8de717c56119d9a4d41fccff6da833d687",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [
+    "DEVELOPMENT_SCOPE_02_DENIED"
+  ],
+  "private_marker_sources": {
+    "DEVELOPMENT_SCOPE_02_DENIED": "development-scope-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-scope-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

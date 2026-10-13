@@ -1,0 +1,191 @@
+{
+  "schema": "narrative-supplement-commands-v3",
+  "state": "source_pure_ready_pending_main_review",
+  "execution_source_manifest": {
+    "path": "evaluation/upgrade/U2B2_SUPPLEMENT_SOURCE_MANIFEST.json",
+    "sha256": "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048"
+  },
+  "excluded_from_execution_seal_for_acyclic_hashing": true,
+  "independently_pinned_in_worker_handoff": true,
+  "proposal": {
+    "path": "evaluation/upgrade/U2B2_CONTINUATION_V2.json",
+    "sha256": "45d3f09496a149ca299f98e5dddc4f40ee2c0066700af64dfe3edf32de545b10"
+  },
+  "native_execution_authorized": false,
+  "lease_label_is_not_authorization": true,
+  "future_main_execution_separate_review_required": true,
+  "fixed_output_relative_root": "work/main-u2b2-supplement-v3",
+  "preserved_parent_relative_root": "work/main-u2b2-1239",
+  "mappings": [
+    {
+      "supplement": "s001",
+      "original": "a046"
+    },
+    {
+      "supplement": "s002",
+      "original": "a047"
+    },
+    {
+      "supplement": "s003",
+      "original": "a048"
+    }
+  ],
+  "limits": {
+    "named_lease_active_seconds": 600,
+    "cooperative_batch_seconds": 520,
+    "slot_seconds": 120,
+    "working_ram_mib": 512,
+    "ram_and_hard_lease_enforcement": "external main recorder, not claimed measured or enforced by this Python controller",
+    "aggregate_parent_plus_supplement_bytes": 67108864,
+    "slot_reserve_bytes": 6291456,
+    "python_processes_including_recorder": 3,
+    "owned_client_children": 1,
+    "owned_loopback_listeners": 1,
+    "downloads": 0,
+    "external_calls": 0,
+    "live_model_calls": 0
+  },
+  "outputs": [
+    "plan.json",
+    "journal.jsonl",
+    "run.claim.json",
+    "s001.execution.json",
+    "s001.returned.json",
+    "s001.usage.json",
+    "s001/report.json",
+    "s001/trace.json",
+    "s001/corpus.sqlite",
+    "s002.execution.json",
+    "s002.returned.json",
+    "s002.usage.json",
+    "s002/report.json",
+    "s002/trace.json",
+    "s002/corpus.sqlite",
+    "s003.execution.json",
+    "s003.returned.json",
+    "s003.usage.json",
+    "s003/report.json",
+    "s003/trace.json",
+    "s003/corpus.sqlite"
+  ],
+  "no_parent_writes": true,
+  "no_original_or_supplement_replay": true,
+  "no_started_failed_or_terminal_replacement": true,
+  "no_partial_batch_resume": true,
+  "physical_intentions": 75,
+  "logical_original_slots": 72,
+  "semantic_quality": null,
+  "aggregate_full_plan_safety": null,
+  "actual_cost": null,
+  "commands": [
+    {
+      "id": "verify-source",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_supplement",
+        "verify-source",
+        "--execution-source-sha256",
+        "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-supplement-v3"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_review_and_named_lease": false,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": null
+    },
+    {
+      "id": "prepare",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_supplement",
+        "prepare",
+        "--execution-source-sha256",
+        "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-supplement-v3",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_review_and_named_lease": true,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": 2
+    },
+    {
+      "id": "run",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_supplement",
+        "run",
+        "--execution-source-sha256",
+        "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-supplement-v3",
+        "--provider",
+        "gateway-double",
+        "--model",
+        "test/synthetic-scalar"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_review_and_named_lease": true,
+      "actor_runs": 3,
+      "unexpected_or_incomplete_exit": 2
+    },
+    {
+      "id": "report",
+      "argv": [
+        "py",
+        "-3.11",
+        "-B",
+        "-m",
+        "evaluation.upgrade.narrative_supplement",
+        "report",
+        "--execution-source-sha256",
+        "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+        "--population-review",
+        "../coordination/upgrades/2026-10-11/acceptance/permissioned-research-agent/20261012T1239/POPULATION_REVIEW.json",
+        "--lease-id",
+        "main-u2b2-supplement-v3"
+      ],
+      "cwd": "repository_root",
+      "state": "frozen_unexecuted_at_creation",
+      "expected_exit": 0,
+      "requires_new_main_review_and_named_lease": false,
+      "actor_runs": 0,
+      "unexpected_or_incomplete_exit": null
+    }
+  ],
+  "pure_verification_argv": [
+    "py",
+    "-3.11",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_upgrade_narrative_supplement_pure",
+    "-v"
+  ]
+}

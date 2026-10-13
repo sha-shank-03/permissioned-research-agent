@@ -1,0 +1,95 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "development-revoke-01",
+  "split": "development",
+  "family": "revocation_replacement",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "development-revoke-01",
+    "vendor": "IndigoBrook",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "development-revoke-01-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "IndigoBrook",
+        "title": "IndigoBrook primary R109",
+        "body": "hosting_region: Primary records stay in synthetic Zone109; archive tier R109 is excluded.\nsso: Federation uses Gate9 only after certificate R109 is approved.\nonboarding_days: Standard onboarding takes 20 business days after approval R109.\nsupport_hours: Priority response is within 19 minutes for incident class R109.\nconditions: Activation requires signed schedule R109 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R109 before the rehearsal.\nexceptions: Custom migration package R109 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "development-revoke-01-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "IndigoBrook",
+        "title": "IndigoBrook peer R109",
+        "body": "conditions: Approval witness R109 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "development-revoke-01-general"
+      },
+      {
+        "object_id": "development-revoke-01-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "IndigoBrook",
+        "title": "IndigoBrook private R109",
+        "body": "dependencies: Procurement ticket R109 requires finance concurrence. DEVELOPMENT_REVOKE_01_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [
+      {
+        "id": "development-revoke-01-event1",
+        "target": "development-revoke-01-private",
+        "phase": "before_send",
+        "trigger": "target_opened",
+        "kind": "revoke_membership",
+        "principal": "priya",
+        "group": "procurement"
+      }
+    ],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-revoke-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

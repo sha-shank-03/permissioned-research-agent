@@ -1,0 +1,223 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-qual-01",
+  "input_sha256": "4b817157baf81c1cc86338f568193a80f1243605acf926cd5f5c5c1eab14d951",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-qual-01-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone101; archive tier R101 is excluded.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": true,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone101; archive tier R101 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "01ca7ddcb504c85fdaaf706c9aa76eafea2b8a9b23ca29490f09516d0ac70b5d",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate1 only after certificate R101 is approved.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 90,
+      "end": 157,
+      "quote": "sso: Federation uses Gate1 only after certificate R101 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "9e496143e1b35de6d2a052211b8f1bd3c57e9dbc1ada5aa26ff08a73a2e2f6d8",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 12 business days after approval R101.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": true,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 158,
+      "end": 238,
+      "quote": "onboarding_days: Standard onboarding takes 12 business days after approval R101.",
+      "temporal_role": "current",
+      "semantic_signature": "9afe868a56d6270d4fa92f7d1c75570cc330851f032b2e5dbf611037f65883bf",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 11 minutes for incident class R101.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 239,
+      "end": 317,
+      "quote": "support_hours: Priority response is within 11 minutes for incident class R101.",
+      "temporal_role": "current",
+      "semantic_signature": "2df895a0df21613115b8d21ef78448319875ebb0c19713202c4d689aa324fefe",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R101 and the designated reviewer.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": true,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 318,
+      "end": 399,
+      "quote": "conditions: Activation requires signed schedule R101 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "9a200b0b0e9310e5e8f88f18e18f9aed4dfee5bbb1a04d6987be50562372442f",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R101 before the rehearsal.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 400,
+      "end": 489,
+      "quote": "dependencies: The import stage depends on completing checklist R101 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "5fec855b8fc77a05bbeb873ac27447f530bf57c704ff0ab18a48c761a8f076ec",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R101 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-primary",
+      "revision": "1",
+      "content_sha256": "5bdbae0042caaa33bf350f51512d2d4fecb7c49e77e743e724239399383d8095",
+      "start": 490,
+      "end": 576,
+      "quote": "exceptions: Custom migration package R101 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "9b0162d4d7c4fbe5c7228218df2560b44bbde4090a4308b3986ee068c4e3cdec",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R101 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": true,
+      "source_id": "development-qual-01-peer",
+      "revision": "1",
+      "content_sha256": "6b361c0ecb5a5758e8ca45d235c63754e63b6780682b222aa8838dd1e7e572a4",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R101 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "e3adffdeba989fda58d2bb354ccd9962b4098098065e7988b3921525ec121fdc",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R101 requires finance concurrence. DEVELOPMENT_QUAL_01_DENIED",
+      "qualifiers": [
+        "R101"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-private",
+      "revision": "1",
+      "content_sha256": "86936e1479254d0c1c7ba45710b697483835ccd001ad1de26b435a2372c61a08",
+      "start": 0,
+      "end": 94,
+      "quote": "dependencies: Procurement ticket R101 requires finance concurrence. DEVELOPMENT_QUAL_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "996e06d578803e52a9aa435f08b8d229ac225845ee62e6bd47449ede8eae2766",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-qual-01-f10",
+      "topic": "exceptions",
+      "required_summary": "Only deployment ring R101 may postpone the rehearsal; customer acceptance is still required.",
+      "qualifiers": [
+        "R101",
+        "customer acceptance remains required"
+      ],
+      "critical": false,
+      "source_id": "development-qual-01-exception",
+      "revision": "1",
+      "content_sha256": "d519d8aa6e27f7fd7113b469ad7033ec4b25bd3faf25c83fe2244de738107758",
+      "start": 0,
+      "end": 104,
+      "quote": "exceptions: Only deployment ring R101 may postpone the rehearsal; customer acceptance is still required.",
+      "temporal_role": "current",
+      "semantic_signature": "3e3f6a5cf992672c22e4e60ba9beb0422872cfb63855dba06c633b015681603b",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "DEVELOPMENT_QUAL_01_DENIED": "development-qual-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-qual-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

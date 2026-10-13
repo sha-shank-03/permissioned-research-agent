@@ -1,0 +1,204 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-time-04",
+  "input_sha256": "df1cff7d48078e4673ff05eae7b8d909f367c0e34197f9bca79aaf1ac8344d0a",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "stale_only",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-time-04-f01",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 35 business days after approval R124.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": true,
+      "source_id": "capability-time-04-expired",
+      "revision": "1",
+      "content_sha256": "b994bff232212e4f9ccb4378f578aa5e8bc6208f3f2eae6061954080cf16b2f6",
+      "start": 0,
+      "end": 80,
+      "quote": "onboarding_days: Standard onboarding takes 35 business days after approval R124.",
+      "temporal_role": "stale",
+      "semantic_signature": "197d98e47f906bc1c45c3cfb1772d93bd0e1c47e0dd7ae76097e381ebf2a5300",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f02",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone124; archive tier R124 is excluded.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": true,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone124; archive tier R124 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "07db290f27bd75f9ca717015412a3f345acf2be1fd6cfed63adc2313667bad49",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f03",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate24 only after certificate R124 is approved.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": false,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate24 only after certificate R124 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "f4f042b3fb6ec64f35a0494628d32c7f1d1f65272f505aab861d883027902504",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 34 minutes for incident class R124.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": false,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 159,
+      "end": 237,
+      "quote": "support_hours: Priority response is within 34 minutes for incident class R124.",
+      "temporal_role": "current",
+      "semantic_signature": "fbcc4d1423674b8d8aff8c6a2ed5953df36ed068e263c47334d9baa7989e8a0a",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R124 and the designated reviewer.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": true,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 238,
+      "end": 319,
+      "quote": "conditions: Activation requires signed schedule R124 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "0d546b3baa9d85a3c0404695c592b9867669e35af239dd1dfa89dcda08d25d6d",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R124 before the rehearsal.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": false,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 320,
+      "end": 409,
+      "quote": "dependencies: The import stage depends on completing checklist R124 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "af3828c8c044e5051c805250782d6abf71f55daa650233d7bbad930651115ad3",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R124 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": false,
+      "source_id": "capability-time-04-primary",
+      "revision": "1",
+      "content_sha256": "707dc16a7c7e454f6bf733917b6b2452089356f37c9541554dc78d5d7feb1ff2",
+      "start": 410,
+      "end": 496,
+      "quote": "exceptions: Custom migration package R124 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "176b2d33e83b3b25ace548a68c4dbddcd391e05e30ed253ff037449e6655885f",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R124 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": true,
+      "source_id": "capability-time-04-peer",
+      "revision": "1",
+      "content_sha256": "56295e04404accca8b36f712f234f0b21ca5edad26d648b1330f302426df7ffd",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R124 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "1896d6c220e1d54a7976ada5acd588a73d96a61b03e090d3a64b9a8a45669cc1",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-04-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R124 requires finance concurrence. CAPABILITY_TIME_04_DENIED",
+      "qualifiers": [
+        "R124"
+      ],
+      "critical": false,
+      "source_id": "capability-time-04-private",
+      "revision": "1",
+      "content_sha256": "4cbb1d6122a0eb84a1f3c23b6c8170127298a5824cfbbef80fcbde4bcdae1f76",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R124 requires finance concurrence. CAPABILITY_TIME_04_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "722124696baf191ff8fd23a47294534f75a4b73e60558bc0fd04ec834187d0d3",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_TIME_04_DENIED": "capability-time-04-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-04",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

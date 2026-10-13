@@ -1,0 +1,67 @@
+{
+  "schema": "narrative-two-slot-continuation-v4",
+  "state": "proposed_unexecuted_source_only",
+  "checkpoint_file_sha256": "ba6dd42d75da40b4c55484bc38659ffc72b41195c84767fca0c5eee7a03c1bfe",
+  "parent_bindings": {
+    "v3_source_manifest_sha256": "f395df2e3823bc0163b56c885ab6a89410469d79bdfe2612b66b053aea1ea048",
+    "v3_command_manifest_sha256": "d3b8caa7edce59643a380474610e913713f76ab98e56a67c4ceabf08065bbda0",
+    "v3_plan_sha256": "044d1af25662a2deb5581106a52caa2860b5f6a0296a5c33ea1855714bc29d57",
+    "v3_journal_sha256": "eeeeb049b4781463647ff674cc6ef7f4e4ac2ea876d765b785bf8f05af3ffb85",
+    "v3_inventory_sha256": "a737e85eb932548540fa894a32ba8facfcad1fb371cbf5e0e96e41c9681b28df",
+    "main_review_sha256": "8c1422c54d7cb029a025ea2286066896c872f5872959c508b04f8c7971881f20",
+    "main_read_only_report_sha256": "611ae292d0b75e21e5754fd4e45633bc6249fa60b42965052d2746be8b77df9a",
+    "main_execution_summary_sha256": "f600fbb77e62d17ae851feb29cb34add3b6dfe24d394ff75f32d7ecf5eb6179b",
+    "original_parent_bindings_sha256": "5d3ed370c01d65ea08708a8637a28b971728036d8ed0536ca2f0b9e2ced12f5b"
+  },
+  "attempts": [
+    {
+      "id": "c001",
+      "parent_attempt_id": "a047",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "adaptive",
+      "input_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "state": "unexecuted",
+      "prior_supplement_id": "s002"
+    },
+    {
+      "id": "c002",
+      "parent_attempt_id": "a048",
+      "task_id": "capability-budget-04",
+      "family": "budget_failure",
+      "principal": "priya",
+      "policy": "fixed",
+      "input_sha256": "1e62d95c9e08c53b740f641f894d41a1388f46f74bdce909b42e78eb9b7b0575",
+      "rubric_sha256": "886aa63d83de5cb92954ee4511fb16d0bb782ef48edd4b9abe0f830f815d37c2",
+      "config_sha256": "12382ec4cbd479bffa49ad2e164396e01469c7f72aa98bcc4b579168cdbcafd5",
+      "hypotheses": [
+        {
+          "outcome": "cancelled",
+          "error": "cancelled"
+        }
+      ],
+      "state": "unexecuted",
+      "prior_supplement_id": "s003"
+    }
+  ],
+  "physical_intentions_after_prepare": 77,
+  "logical_intended": 72,
+  "permanently_retained_unknown": {
+    "prior_supplement_id": "s001",
+    "original_slot": "a046",
+    "state": "interrupted_unknown",
+    "domain_outcome": null,
+    "provider_requests": null
+  },
+  "native_authorized": false,
+  "main_resource_accounting_correction_and_review_required": true
+}

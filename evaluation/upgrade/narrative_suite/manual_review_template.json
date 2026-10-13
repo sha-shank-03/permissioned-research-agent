@@ -1,0 +1,26 @@
+{
+  "template_schema": "unfilled-narrative-manual-review-guide-v1",
+  "accepted_review": false,
+  "instructions": "Create a separate narrative-independent-manual-v1 record after inspecting raw sources and the rubric. Replace every placeholder; enumerate all seven topics, every emitted claim and every eligible relationship. This guide is not an accepted review.",
+  "schema": "narrative-independent-manual-v1",
+  "bindings": {
+    "task_id": "REPLACE_FROM_INSPECTION",
+    "input_sha256": "REPLACE_CANONICAL_CONTENT_SHA256",
+    "rubric_sha256": "REPLACE_CANONICAL_CONTENT_SHA256",
+    "draft_sha256": "REPLACE_CANONICAL_CONTENT_SHA256"
+  },
+  "reviewer": {
+    "id": "manual:REPLACE_WITH_INDEPENDENT_OPERATOR_ID",
+    "independent_of_actor": null,
+    "methodology": "raw_sources_and_relationship_rubric"
+  },
+  "topics": [
+    {"topic": "REPLACE_ALL_SEVEN", "state_correctness": "appropriate|inappropriate|ambiguous", "sufficiency": "adequate|missing_required_detail|ambiguous"}
+  ],
+  "claims": [
+    {"claim_id": "REPLACE_EVERY_EMITTED_CLAIM", "support": "entailed|unsupported|ambiguous", "qualifiers": "retained|lost|ambiguous", "causality": "retained|unsupported|not_applicable|ambiguous", "contradictions": "handled|ignored|not_applicable|ambiguous", "critical": null}
+  ],
+  "relationships": [
+    {"fact_id": "REPLACE_EVERY_ELIGIBLE_RELATIONSHIP", "coverage": "covered|omitted|ambiguous", "claim_ids": []}
+  ]
+}

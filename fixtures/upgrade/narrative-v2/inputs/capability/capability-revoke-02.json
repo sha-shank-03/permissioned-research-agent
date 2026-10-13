@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-revoke-02",
+  "split": "capability",
+  "family": "revocation_replacement",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-revoke-02",
+    "vendor": "DuneOrchard",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-revoke-02-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "DuneOrchard",
+        "title": "DuneOrchard primary R130",
+        "body": "hosting_region: Primary records stay in synthetic Zone130; archive tier R130 is excluded.\nsso: Federation uses Gate30 only after certificate R130 is approved.\nonboarding_days: Standard onboarding takes 41 business days after approval R130.\nsupport_hours: Priority response is within 40 minutes for incident class R130.\nconditions: Activation requires signed schedule R130 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R130 before the rehearsal.\nexceptions: Custom migration package R130 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-revoke-02-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "DuneOrchard",
+        "title": "DuneOrchard peer R130",
+        "body": "conditions: Approval witness R130 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-revoke-02-general"
+      },
+      {
+        "object_id": "capability-revoke-02-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "DuneOrchard",
+        "title": "DuneOrchard private R130",
+        "body": "dependencies: Procurement ticket R130 requires finance concurrence. CAPABILITY_REVOKE_02_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [
+      {
+        "id": "capability-revoke-02-event1",
+        "target": "capability-revoke-02-primary",
+        "phase": "before_release",
+        "trigger": "once",
+        "kind": "replace_source",
+        "principal": "priya",
+        "group": "procurement",
+        "body": "hosting_region: Primary records stay in synthetic Zone130; archive tier R130 is excluded.\nsso: Federation uses Gate30 only after certificate R130 is approved.\nonboarding_days: Standard onboarding takes 91 business days after approval R130.\nsupport_hours: Priority response is within 40 minutes for incident class R130.\nconditions: Activation requires signed schedule R130 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R130 before the rehearsal.\nexceptions: Custom migration package R130 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01"
+      }
+    ],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-revoke-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

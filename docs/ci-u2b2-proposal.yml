@@ -1,0 +1,50 @@
+# Inert proposal. Source review and separate CI authorization required.
+# Copying this into .github/workflows is outside U2-B2 SOURCE/PURE scope.
+name: Proposed U2-B2 local contract checks
+on:
+  workflow_dispatch:
+    inputs:
+      run_native_demo:
+        description: 'Explicitly execute four local development intents; semantic review stays pending'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  pure:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11.9'
+          check-latest: false
+      - run: python -m evaluation.upgrade.narrative_suite verify-source
+      - run: python -m unittest tests.test_upgrade_narrative_suite_pure -v
+  native_demo:
+    if: ${{ inputs.run_native_demo }}
+    needs: pure
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11.9'
+          check-latest: false
+      - run: python -m evaluation.upgrade.narrative_suite verify-source
+      - run: python -m evaluation.upgrade.narrative_suite plan --split development --provider gateway-double --model test/synthetic-scalar --out work/upgrade-u2b2-native-v1/development
+      - run: python -m evaluation.upgrade.narrative_suite run-slice --out work/upgrade-u2b2-native-v1/development --start 1 --count 4 --slice-seconds 520
+      - run: python -m evaluation.upgrade.narrative_suite inspect-slice --out work/upgrade-u2b2-native-v1/development --start 1 --count 4 --evaluation-out work/upgrade-u2b2-native-v1/development-inspection-01.json
+      - if: ${{ always() }}
+        run: python -m evaluation.upgrade.narrative_suite account --out work/upgrade-u2b2-native-v1/development
+# Raw artifacts stay on the runner. No upload action, secrets or semantic gate.

@@ -1,0 +1,66 @@
+{
+  "manifest_id": "u2a-drive-source-candidate-1",
+  "created_at": "2026-10-12T06:29:57.358462+00:00",
+  "status": "source_review_pending_pure_contracts_passed_native_http_unexecuted",
+  "scope": "additive_read_only_drive_adapter_only",
+  "base_published_commit": "b515ac02bfd9fdb694cc7e285a1260ae49b0003e",
+  "branch": "codex/industry-upgrade",
+  "base_u1": {
+    "manifest_id": "u1-source-candidate-4",
+    "path": "evaluation/upgrade/U1_SOURCE_MANIFEST.json",
+    "sha256": "479ee80f5524888f8cee570c73b411e22a9516cab9ef7a74f1432516d544836e",
+    "code_sha256": "83360fac78770689b3d5291757d1dad454a84ac8750a952f166ab86e907b3074",
+    "all_62_entries_unchanged": true,
+    "independent_main_acceptance": "U1 passed 2026-10-12; 168 tests, 9 commands, 338 SQL/citation checks, 4 tamper controls"
+  },
+  "code_sha256": "15fe7667a6c3d91d1f4a7c815a00cb4aed5947c9f4d9e6ae502244f8d60b500e",
+  "files": [
+    {
+      "path": "permissioned_research/upgrade/drive/__init__.py",
+      "sha256": "d281e147b0c7e5de510bc05ed17910849faf3e63318aeab8601d04cf3a59ec75"
+    },
+    {
+      "path": "permissioned_research/upgrade/drive/adapter.py",
+      "sha256": "29b40dd66f4c794c73e30fd0643c62f567e6853f1eefcb60a8751feca6442964"
+    },
+    {
+      "path": "permissioned_research/upgrade/drive/contract.py",
+      "sha256": "1087865e88762e1272d2c075a59c20f53efc57f68318d3861fef975944e09c2f"
+    },
+    {
+      "path": "permissioned_research/upgrade/drive/http.py",
+      "sha256": "6a2b88009d8e883f8712783837b002a51ada384561f3dc8116c4fda0e412a9ac"
+    },
+    {
+      "path": "permissioned_research/upgrade/drive/wire.py",
+      "sha256": "0726bc7e949b82af0698bf75ee1ec4e98ce4659ccdd211654c63fc8ab56d6d48"
+    },
+    {
+      "path": "tests/test_upgrade_drive_contract.py",
+      "sha256": "5fb64b2b0ede505a58bba47d4736ea711fa87e22c07f4e923951a5a059b55dd6"
+    },
+    {
+      "path": "tests/test_upgrade_drive_http.py",
+      "sha256": "0abc4c782e0ed25e9191f648a3bc64d68164eac2df2b36a161b60bf73209c6f2"
+    },
+    {
+      "path": "docs/upgrade-u2a-drive.md",
+      "sha256": "f7c2c1939db1c7ddf1ad88ab2bcd0a846525532bfc2004d45581b1654bfe2c23"
+    }
+  ],
+  "evidence": {
+    "pure_contract_tests": 34,
+    "pure_exit_code": 0,
+    "pure_kind": "authored_in_memory_contract",
+    "native_http_test_methods": 9,
+    "native_http_executed": false,
+    "external_delegated_user_executed": false,
+    "model_calls": 0,
+    "real_credentials_loaded": false
+  },
+  "unexecuted": [
+    "Native local HTTP batch requires a new named lease after source review.",
+    "Real three-user Drive authorization/ACL integration requires main assignment, accounts, verified loader and owner control-plane fixtures.",
+    "Scalar controller integration, narrative synthesis, scoring and U3 are outside U2-A."
+  ]
+}

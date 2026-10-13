@@ -1,0 +1,170 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-time-02",
+  "input_sha256": "2ae859d9489b1d89ab2d16debaba7a61eee79b7c09a0b76bc7cf909c94ca811b",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "unknown",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "unknown"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-time-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone122; archive tier R122 is excluded.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": true,
+      "source_id": "capability-time-02-primary",
+      "revision": "1",
+      "content_sha256": "2a76faae7958ad80064a4d22b763735ccfb2928c26614f194bfc00427a54a844",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone122; archive tier R122 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "da6f3dcbc604f0b0bfbf916cdf66bbf8c5fb809861c3b25915fc0e884c066ee8",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f02",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 33 business days after approval R122.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": true,
+      "source_id": "capability-time-02-primary",
+      "revision": "1",
+      "content_sha256": "2a76faae7958ad80064a4d22b763735ccfb2928c26614f194bfc00427a54a844",
+      "start": 90,
+      "end": 170,
+      "quote": "onboarding_days: Standard onboarding takes 33 business days after approval R122.",
+      "temporal_role": "current",
+      "semantic_signature": "60213756e51df86546c40e8d8baaf410db87220f1a09d29e953a093987c9ee3f",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f03",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 32 minutes for incident class R122.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": false,
+      "source_id": "capability-time-02-primary",
+      "revision": "1",
+      "content_sha256": "2a76faae7958ad80064a4d22b763735ccfb2928c26614f194bfc00427a54a844",
+      "start": 171,
+      "end": 249,
+      "quote": "support_hours: Priority response is within 32 minutes for incident class R122.",
+      "temporal_role": "current",
+      "semantic_signature": "4794a6b4232f05e1b91f365a6e2f6c2ed150fa9025e4d8c56e6f5818e4b72dbb",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f04",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R122 and the designated reviewer.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": true,
+      "source_id": "capability-time-02-primary",
+      "revision": "1",
+      "content_sha256": "2a76faae7958ad80064a4d22b763735ccfb2928c26614f194bfc00427a54a844",
+      "start": 250,
+      "end": 331,
+      "quote": "conditions: Activation requires signed schedule R122 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "424e2d79e52496e2a3baaf78ba49e582ae1ac12c97e793de9e262939e7403cba",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f05",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R122 before the rehearsal.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": false,
+      "source_id": "capability-time-02-primary",
+      "revision": "1",
+      "content_sha256": "2a76faae7958ad80064a4d22b763735ccfb2928c26614f194bfc00427a54a844",
+      "start": 332,
+      "end": 421,
+      "quote": "dependencies: The import stage depends on completing checklist R122 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "4f303777c2b429f71d6d1cb0c236a7f3ce05da92d56e3fbdc7cd3d47450f33e2",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f06",
+      "topic": "conditions",
+      "required_summary": "Approval witness R122 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": true,
+      "source_id": "capability-time-02-peer",
+      "revision": "1",
+      "content_sha256": "dd94abf07d24da88475b31daebf5a1954802a8b86cf2bf6f780b99a6268fd9a9",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R122 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "3da89038fe2d1374f0d463eba99e8f8c06b76ffe1961adc78de58a4d25a72b8f",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-02-f07",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R122 requires finance concurrence. CAPABILITY_TIME_02_DENIED",
+      "qualifiers": [
+        "R122"
+      ],
+      "critical": false,
+      "source_id": "capability-time-02-private",
+      "revision": "1",
+      "content_sha256": "003e2d71c5ef7736c2e8aec46d22ea15e28f22d81284825088c00ad36e0429cb",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R122 requires finance concurrence. CAPABILITY_TIME_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "59d8e99331ac025d5052930db6c790b703ac07fb6dce521ed11b94d8953b5cc7",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [
+    "CAPABILITY_TIME_02_DENIED"
+  ],
+  "private_marker_sources": {
+    "CAPABILITY_TIME_02_DENIED": "capability-time-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

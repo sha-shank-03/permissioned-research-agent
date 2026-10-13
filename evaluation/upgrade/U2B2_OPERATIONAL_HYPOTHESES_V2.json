@@ -1,0 +1,47 @@
+{
+  "schema": "u2b2-operational-hypothesis-correction-v2",
+  "version": "u2b2-operational-hypothesis-v2",
+  "parent_actor_source_manifest_sha256": "25350c9f769f98feddc5285d07ed1df008382e035de967186f306d32f881e020",
+  "parent_frozen_native_commands_sha256": "0a85541c65c56cd2e4b461c2058922a99323224b6df01ae359f643c795b17711",
+  "corrections": [
+    {
+      "task_id": "capability-budget-03",
+      "policy": "adaptive",
+      "before": [
+        {
+          "outcome": "failed",
+          "error": "invalid_memo"
+        }
+      ],
+      "after": [
+        {
+          "outcome": "failed",
+          "error": "invalid_decision"
+        }
+      ]
+    },
+    {
+      "task_id": "capability-budget-03",
+      "policy": "fixed",
+      "before": [
+        {
+          "outcome": "failed",
+          "error": "invalid_memo"
+        }
+      ],
+      "after": [
+        {
+          "outcome": "failed",
+          "error": "invalid_decision"
+        }
+      ]
+    }
+  ],
+  "reason": "NarrativeAction.parse/decode reject the additional finish argument semantic_approval at the closed-key decision boundary before validate_draft. One repair then preserves invalid_decision.",
+  "actor_guard_policies_budgets_corpus_rubric_changed": false,
+  "original_failure_or_exit_rewritten": false,
+  "old_manifest_rewritten": false,
+  "retrospective_cohort_pass": false,
+  "new_native_executions": 0,
+  "semantic_quality": null
+}

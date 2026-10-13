@@ -1,0 +1,206 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-budget-02",
+  "input_sha256": "0799ca21084b7e07370a25f7f1f05502337b92c35d963abbeee123142758100e",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-budget-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone112; archive tier R112 is excluded.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": true,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone112; archive tier R112 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "73f13833774e7020d6bb381cc77c71cef6be291de44b94ca6b783772da09f7c0",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate12 only after certificate R112 is approved.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": false,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate12 only after certificate R112 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "1b0cc6cfd5a2d37fcdfc2b80811918a7d973d802c902efea51c10b9aa8716e88",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 23 business days after approval R112.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": true,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 23 business days after approval R112.",
+      "temporal_role": "current",
+      "semantic_signature": "f2744963fa83a87449412f53d9c0487f12ca251c68c9d0374f683513c643a53b",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 22 minutes for incident class R112.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": false,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 22 minutes for incident class R112.",
+      "temporal_role": "current",
+      "semantic_signature": "45faed702a0c106db053883040cec21edbdb430e2151a4ee53212bde6b6d4e13",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R112 and the designated reviewer.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": true,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R112 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "d2c5afd481eef39cc7ee0ef476fc385110ea6e69836a5be3434b9762999fb1cf",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R112 before the rehearsal.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": false,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R112 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "19c5d3ddd3e69694241751d0cd5f8139bb7f33c89c7d27c5f6f5dc8562596ab0",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R112 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": false,
+      "source_id": "development-budget-02-primary",
+      "revision": "1",
+      "content_sha256": "e7632b302f0567c88bee138000d0f971e2e5347cdd8f667a20261650cf9b8767",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R112 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "dc572cab65c05488540d84588b14dfa15adbdb61551b9a7b7c7a6306a3ac20d8",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R112 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": true,
+      "source_id": "development-budget-02-peer",
+      "revision": "1",
+      "content_sha256": "daa2705df450334a92cd0611eaa6d4519f480faf1989be2215f5c74920e5ae6a",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R112 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "58b806f4877bdf0def03ca1d1791bb78f11319363f183cebba64cfeca878b491",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-budget-02-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R112 requires finance concurrence. DEVELOPMENT_BUDGET_02_DENIED",
+      "qualifiers": [
+        "R112"
+      ],
+      "critical": false,
+      "source_id": "development-budget-02-private",
+      "revision": "1",
+      "content_sha256": "b038746d12a9f9aadabdb27a1d54d6200ed5f09a10c882aa13c466e57d62ff6e",
+      "start": 0,
+      "end": 96,
+      "quote": "dependencies: Procurement ticket R112 requires finance concurrence. DEVELOPMENT_BUDGET_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "0e067c63f50025a749915f97e2e498ac69b2e454f31eb67283af02c0c02ced77",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [
+    "DEVELOPMENT_BUDGET_02_DENIED"
+  ],
+  "private_marker_sources": {
+    "DEVELOPMENT_BUDGET_02_DENIED": "development-budget-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-budget-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

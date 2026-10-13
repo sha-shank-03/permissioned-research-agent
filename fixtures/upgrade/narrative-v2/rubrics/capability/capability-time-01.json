@@ -1,0 +1,204 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-time-01",
+  "input_sha256": "5c445f509ed40b8f89ab12fd9bfb9d5f4460c13de34d89d9f7e26cf37b9a4b0b",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "stale_only",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-time-01-f01",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 31 minutes for incident class R121.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": false,
+      "source_id": "capability-time-01-expired",
+      "revision": "1",
+      "content_sha256": "f992d4a1eebef89a05a88d39361b6f3803039baf637446a3499b8c02546a653b",
+      "start": 0,
+      "end": 78,
+      "quote": "support_hours: Priority response is within 31 minutes for incident class R121.",
+      "temporal_role": "stale",
+      "semantic_signature": "cb5fe1f0b68545fe59fce7e97302147c7692bac57ebd48b6d7e2ad8d5683814b",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f02",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone121; archive tier R121 is excluded.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": true,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone121; archive tier R121 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "8a71fd6d7082c53c50182b4ac87c8df88d29902c994244ba6fd22ced85687fa5",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f03",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate21 only after certificate R121 is approved.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": false,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate21 only after certificate R121 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "0cac18a9f9ddab43b627a59cc67d6502e346d2f51e6af3a6c12615ea48d50053",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f04",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 32 business days after approval R121.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": true,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 32 business days after approval R121.",
+      "temporal_role": "current",
+      "semantic_signature": "c22b77439f7df3d0c52f70d81c26bd08d3654b59023ddae33840b2cca2ff6d0d",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R121 and the designated reviewer.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": true,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 240,
+      "end": 321,
+      "quote": "conditions: Activation requires signed schedule R121 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "e16b5fbbf8a51aedfbe09628392d751f9787a9a944c37cb3422213f4aec97c85",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R121 before the rehearsal.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": false,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 322,
+      "end": 411,
+      "quote": "dependencies: The import stage depends on completing checklist R121 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "de333032ebbb0acee02847f78aff0d41bb6cfca46cdaa21a7cdb70226d72b655",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R121 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": false,
+      "source_id": "capability-time-01-primary",
+      "revision": "1",
+      "content_sha256": "b0eb8091cd3a51ab4ee02bf22b1ab9c66f573225440927f89c3ff4f9b09c0b68",
+      "start": 412,
+      "end": 498,
+      "quote": "exceptions: Custom migration package R121 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "3fa2b8d36bd3d4659bf77ab98fee5e3483ea2adf417a9bf59d7b83bdfbb055f4",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R121 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": true,
+      "source_id": "capability-time-01-peer",
+      "revision": "1",
+      "content_sha256": "cd19e2c990b146c661dd66f00046aab74ab556000bcda03354a3028b081a1a98",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R121 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "8d74097ec6dea5dbff2cb7ad375bab0b03892f1ec68bf69a1709f5b539bb0bcf",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-time-01-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R121 requires finance concurrence. CAPABILITY_TIME_01_DENIED",
+      "qualifiers": [
+        "R121"
+      ],
+      "critical": false,
+      "source_id": "capability-time-01-private",
+      "revision": "1",
+      "content_sha256": "c9f9e90b00fb4591249e50e8f28f3c478705cda4394ee7168a01cf1e810babd6",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R121 requires finance concurrence. CAPABILITY_TIME_01_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "125f17985302c49c56778ac8cefca55996feb1620ccb59351459741466bfdb8b",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_TIME_01_DENIED": "capability-time-01-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

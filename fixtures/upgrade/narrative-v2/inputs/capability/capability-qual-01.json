@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-qual-01",
+  "split": "capability",
+  "family": "qualifiers_dependencies",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-qual-01",
+    "vendor": "MicaBridge",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-qual-01-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "MicaBridge",
+        "title": "MicaBridge primary R113",
+        "body": "hosting_region: Primary records stay in synthetic Zone113; archive tier R113 is excluded.\nsso: Federation uses Gate13 only after certificate R113 is approved.\nonboarding_days: Standard onboarding takes 24 business days after approval R113.\nsupport_hours: Priority response is within 23 minutes for incident class R113.\nconditions: Activation requires signed schedule R113 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R113 before the rehearsal.\nexceptions: Custom migration package R113 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-qual-01-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "MicaBridge",
+        "title": "MicaBridge peer R113",
+        "body": "conditions: Approval witness R113 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-qual-01-general"
+      },
+      {
+        "object_id": "capability-qual-01-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "MicaBridge",
+        "title": "MicaBridge private R113",
+        "body": "dependencies: Procurement ticket R113 requires finance concurrence. CAPABILITY_QUAL_01_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      },
+      {
+        "object_id": "capability-qual-01-exception",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "MicaBridge",
+        "title": "MicaBridge exception R113",
+        "body": "exceptions: Only deployment ring R113 may postpone the rehearsal; customer acceptance is still required.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-qual-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

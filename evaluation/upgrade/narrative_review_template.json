@@ -1,0 +1,47 @@
+{
+  "schema": "research-narrative-independent-review-v1",
+  "status": "blank_template_not_an_executed_review",
+  "review_kind": "independent_manual",
+  "actor_is_reviewer": false,
+  "reviewer_id": null,
+  "second_reviewer_id": null,
+  "draft_sha256": null,
+  "trusted_raw_source_manifest_sha256": null,
+  "independent_required_fact_rubric_sha256": null,
+  "policy_blinded": null,
+  "claim_review_fields": [
+    "claim_id",
+    "support_entailed_unsupported_ambiguous",
+    "qualifier_retention",
+    "dependency_exception_retention",
+    "contradiction_handling",
+    "temporal_framing",
+    "causal_support",
+    "criticality",
+    "independent_source_quote_rationale",
+    "adjudication"
+  ],
+  "claim_reviews": [],
+  "task_review": {
+    "emitted_claims": null,
+    "entailed_claims": null,
+    "unsupported_claims": null,
+    "ambiguous_claims": null,
+    "eligible_required_facts": null,
+    "correctly_covered_required_facts": null,
+    "missing_obligations": null,
+    "over_abstention": null,
+    "critical_unsupported_claims": null,
+    "conflict_stale_unknown_handling": null,
+    "cross_principal_leakage_review": null,
+    "claim_support_ratio": null,
+    "required_fact_coverage_ratio": null,
+    "reviewer_agreement": null,
+    "research_task_completion": null
+  },
+  "limitations": [
+    "Exact spans and access do not prove entailment or qualifier retention.",
+    "Null means pending/unavailable, never zero or passed.",
+    "No review, score or acceptance label was produced by this template."
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "narrative-task-input-v1",
+  "id": "capability-time-01",
+  "split": "capability",
+  "family": "temporal_missing",
+  "principal": "priya",
+  "fixture": {
+    "schema_version": 1,
+    "fictional": true,
+    "scenario": "capability-time-01",
+    "vendor": "UmberCrossing",
+    "as_of": "2026-10-12",
+    "principals": {
+      "alex": [
+        "employees"
+      ],
+      "priya": [
+        "employees",
+        "procurement"
+      ],
+      "sam": [
+        "employees",
+        "security"
+      ]
+    },
+    "sources": [
+      {
+        "object_id": "capability-time-01-expired",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "UmberCrossing",
+        "title": "UmberCrossing expired R121",
+        "body": "support_hours: Priority response is within 31 minutes for incident class R121.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2026-10-05",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-time-01-primary",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "UmberCrossing",
+        "title": "UmberCrossing primary R121",
+        "body": "hosting_region: Primary records stay in synthetic Zone121; archive tier R121 is excluded.\nsso: Federation uses Gate21 only after certificate R121 is approved.\nonboarding_days: Standard onboarding takes 32 business days after approval R121.\nconditions: Activation requires signed schedule R121 and the designated reviewer.\ndependencies: The import stage depends on completing checklist R121 before the rehearsal.\nexceptions: Custom migration package R121 is outside the standard delivery commitment.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ]
+      },
+      {
+        "object_id": "capability-time-01-peer",
+        "connector": "teamchat",
+        "revision": 1,
+        "subject": "UmberCrossing",
+        "title": "UmberCrossing peer R121",
+        "body": "conditions: Approval witness R121 must attend the activation rehearsal.\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "employees"
+        ],
+        "channel": "capability-time-01-general"
+      },
+      {
+        "object_id": "capability-time-01-private",
+        "connector": "docshub",
+        "revision": 1,
+        "subject": "UmberCrossing",
+        "title": "UmberCrossing private R121",
+        "body": "dependencies: Procurement ticket R121 requires finance concurrence. CAPABILITY_TIME_01_DENIED\n",
+        "effective_at": "2026-09-01",
+        "review_until": "2027-01-01",
+        "allow_groups": [
+          "procurement"
+        ]
+      }
+    ]
+  },
+  "execution": {
+    "events": [],
+    "provider_fault": null,
+    "transport_fault": null,
+    "cancel_before_send": false,
+    "config_overrides": {}
+  },
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-time-01",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

@@ -1,5 +1,10 @@
 # Permissioned Research Agent
 
+**U1 upgrade source checkpoint:** an additive Gateway-native scalar path and
+passing pure units are available; transport/full-suite/demo checks await a named
+lease and main review. No upgrade milestone, live model or external sandbox has
+passed. See [the U1 walkthrough and limits](docs/upgrade-u1.md).
+
 A small Python 3.11 workflow that researches a fictional vendor across two local enterprise connectors and returns a four-topic memo with exact source citations. Documents use object ACLs; messages use channel ACLs. Three simulated identities have different, nonhierarchical access.
 
 **Current stage: final local MVP acceptance passed independently on Windows.** All 128 local tests passed. Across 30 same-author actor-held-out examples and three paired repeats, scripted passed 90/90 primary attempts and baseline passed 78/90. Both passed citation permission and cross-identity authority checks, with zero detected forbidden disclosures in 9,609 scripted and 7,614 baseline surface observations. All 18 oracle corruption controls and eight disclosure corruption controls were rejected; the Windows clean-copy checks passed. Main accepted all 30 rubrics and candidate3 evaluator source before scoring. Hosted CI remains unexecuted. See [EVIDENCE.md](EVIDENCE.md) for denominators, command receipts and limitations.

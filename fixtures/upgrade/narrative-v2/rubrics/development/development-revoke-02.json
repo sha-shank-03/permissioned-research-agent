@@ -1,0 +1,332 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "development-revoke-02",
+  "input_sha256": "1c9d1cc0ae742b07e1d117df41c08f6aa5506fd35cf2c0a4c067d36b3ea1fc29",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "development-revoke-02-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone110; archive tier R110 is excluded.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone110; archive tier R110 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "567c32dde9469af863ae158e64cf76f72d675f8759211adda598a7d1ec4298d9",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate10 only after certificate R110 is approved.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate10 only after certificate R110 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "8328c2753306cd87e404d893891a1f4b5f408562eb751451f2e491951b893d8e",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 21 business days after approval R110.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 21 business days after approval R110.",
+      "temporal_role": "current",
+      "semantic_signature": "03f5cbd1973802d6ce03530de10d1fa54b01e557b0279c515bc1509860d45372",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 20 minutes for incident class R110.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 20 minutes for incident class R110.",
+      "temporal_role": "current",
+      "semantic_signature": "d99049e13b20c71557713c408952fd7ec19899c31201293865b22cf4aa22a3d0",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R110 and the designated reviewer.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R110 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "efeb702c371ada4b36d3b4113bf8cb3658b8743c06182713fee8644b8dfdfeaf",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R110 before the rehearsal.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R110 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "8194c4bae70113071a1f7c64228c7ac7bd8631cee5bbcf9dd043b04151b96f86",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R110 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "1",
+      "content_sha256": "4f99d923c939dbc60feb97a7b84385ef7c8e37174d1744644aacd944e305a263",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R110 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "42102999884033a65ecba10975aa64dfb83aa1137e7465dc5db08d7b8725a09c",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R110 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-peer",
+      "revision": "1",
+      "content_sha256": "0bdc4d18f3f1d9b703248e39411569ffb8ef2bd18e88689096bafe84f9cb4b42",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R110 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "c5adbc4451adabe493c69a4de53a6d0225ccf5b0ae6b6ae969f522818602d4c1",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R110 requires finance concurrence. DEVELOPMENT_REVOKE_02_DENIED",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-private",
+      "revision": "1",
+      "content_sha256": "9e8cdac3e9b78d4ebf041c35e6f3b9c5f9f2b930664de4c38971067afb859682",
+      "start": 0,
+      "end": 96,
+      "quote": "dependencies: Procurement ticket R110 requires finance concurrence. DEVELOPMENT_REVOKE_02_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "78fddd2d1856b34aa07905bd6c2cac16a2abec308d4ef02cea3d5bc953db3721",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-hosting_region",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone110; archive tier R110 is excluded.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone110; archive tier R110 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "567c32dde9469af863ae158e64cf76f72d675f8759211adda598a7d1ec4298d9",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-sso",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate10 only after certificate R110 is approved.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate10 only after certificate R110 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "8328c2753306cd87e404d893891a1f4b5f408562eb751451f2e491951b893d8e",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-onboarding_days",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 71 business days after approval R110.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 71 business days after approval R110.",
+      "temporal_role": "current",
+      "semantic_signature": "9661449321102365d62270a77a9d5d48e0c1f19f30ec49d9c30807b4e3190ca5",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-support_hours",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 20 minutes for incident class R110.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 20 minutes for incident class R110.",
+      "temporal_role": "current",
+      "semantic_signature": "d99049e13b20c71557713c408952fd7ec19899c31201293865b22cf4aa22a3d0",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-conditions",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R110 and the designated reviewer.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": true,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R110 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "efeb702c371ada4b36d3b4113bf8cb3658b8743c06182713fee8644b8dfdfeaf",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-dependencies",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R110 before the rehearsal.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R110 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "8194c4bae70113071a1f7c64228c7ac7bd8631cee5bbcf9dd043b04151b96f86",
+      "independent_review_required": true
+    },
+    {
+      "id": "development-revoke-02-replacement-exceptions",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R110 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R110"
+      ],
+      "critical": false,
+      "source_id": "development-revoke-02-primary",
+      "revision": "2",
+      "content_sha256": "5f5486b52f769b7b1085df6fad67d7672fffb4315297e285bbc7c521944cf83b",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R110 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "42102999884033a65ecba10975aa64dfb83aa1137e7465dc5db08d7b8725a09c",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [
+    "development-revoke-02-event1"
+  ],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "DEVELOPMENT_REVOKE_02_DENIED": "development-revoke-02-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-development-revoke-02",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}

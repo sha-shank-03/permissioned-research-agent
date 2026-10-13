@@ -1,0 +1,3 @@
+# Exposed synthetic narrative tasks
+
+MIT; authored 12 October 2026 for Permissioned Research Agent. 36 unique input tasks: 12 development, 24 capability; six families with 2/4 each. Inputs and independently specified relationship rubrics are separate. Same-author data is exposed, not blind or main-held unseen. No actor output generated these rubrics; no semantic review or evaluation ran. Entity/source lineages and intrinsic fact signatures are disjoint across splits. Relationship templates and topic prefixes overlap; this pack does not establish general-language competence. Replacement versions within one task intentionally retain unchanged obligations. Parent LICENSE applies.

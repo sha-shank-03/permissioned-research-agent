@@ -1,0 +1,223 @@
+{
+  "schema": "narrative-independent-rubric-v1",
+  "task_id": "capability-qual-04",
+  "input_sha256": "3ad5247c38042c2817e70d6111c1b7729b72cd9464b2b5cb04cfe60b45bcc2ac",
+  "authoring_before_actor_execution": true,
+  "actor_or_response_derived": false,
+  "same_author_exposed": true,
+  "semantic_review_status": "pending_independent_manual",
+  "proposed_initial_topic_states": {
+    "hosting_region": "supported",
+    "sso": "supported",
+    "onboarding_days": "supported",
+    "support_hours": "supported",
+    "conditions": "supported",
+    "dependencies": "supported",
+    "exceptions": "supported"
+  },
+  "required_relationships": [
+    {
+      "id": "capability-qual-04-f01",
+      "topic": "hosting_region",
+      "required_summary": "Primary records stay in synthetic Zone116; archive tier R116 is excluded.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": true,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 0,
+      "end": 89,
+      "quote": "hosting_region: Primary records stay in synthetic Zone116; archive tier R116 is excluded.",
+      "temporal_role": "current",
+      "semantic_signature": "1b8170e250c2f5599d910953ebc25a516c6570b5a5fe1112097be599e022021c",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f02",
+      "topic": "sso",
+      "required_summary": "Federation uses Gate16 only after certificate R116 is approved.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 90,
+      "end": 158,
+      "quote": "sso: Federation uses Gate16 only after certificate R116 is approved.",
+      "temporal_role": "current",
+      "semantic_signature": "3546cfe340879d416909f11ea252361438e9a93c39462c67138eaefe99474679",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f03",
+      "topic": "onboarding_days",
+      "required_summary": "Standard onboarding takes 27 business days after approval R116.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": true,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 159,
+      "end": 239,
+      "quote": "onboarding_days: Standard onboarding takes 27 business days after approval R116.",
+      "temporal_role": "current",
+      "semantic_signature": "6d0d09ba4755bff7edc47856fd909d789ca6e238ac1d16483a50b6f394d2d725",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f04",
+      "topic": "support_hours",
+      "required_summary": "Priority response is within 26 minutes for incident class R116.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 240,
+      "end": 318,
+      "quote": "support_hours: Priority response is within 26 minutes for incident class R116.",
+      "temporal_role": "current",
+      "semantic_signature": "794d4c06fd25961ec112ba1f5c4c5a7a13c1422574ae3493e1fd4a0d7fe78ecc",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f05",
+      "topic": "conditions",
+      "required_summary": "Activation requires signed schedule R116 and the designated reviewer.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": true,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 319,
+      "end": 400,
+      "quote": "conditions: Activation requires signed schedule R116 and the designated reviewer.",
+      "temporal_role": "current",
+      "semantic_signature": "b13a6b3ec6ced3694a0bb1e1e65b0ca3252d1fbf5e8431c2d8c3db54e3a5c19a",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f06",
+      "topic": "dependencies",
+      "required_summary": "The import stage depends on completing checklist R116 before the rehearsal.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 401,
+      "end": 490,
+      "quote": "dependencies: The import stage depends on completing checklist R116 before the rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "7ba6925ebea41fee0cf51fb7ecab635143506ffbedae98930cc1b54ed6d2cfbb",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f07",
+      "topic": "exceptions",
+      "required_summary": "Custom migration package R116 is outside the standard delivery commitment.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-primary",
+      "revision": "1",
+      "content_sha256": "df871996bd2e1a8434f39f954b0c4caf727950cb2ddf51412e9c9ae2766dc7a0",
+      "start": 491,
+      "end": 577,
+      "quote": "exceptions: Custom migration package R116 is outside the standard delivery commitment.",
+      "temporal_role": "current",
+      "semantic_signature": "33576fa07e9366dcf4bcf8d8a483736dc918dd7f5b8211e53d0e704a69133382",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f08",
+      "topic": "conditions",
+      "required_summary": "Approval witness R116 must attend the activation rehearsal.",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": true,
+      "source_id": "capability-qual-04-peer",
+      "revision": "1",
+      "content_sha256": "5d8575cd558c390e46f1abec872ae87433c859cde1cfeb580aabc3330db8c31b",
+      "start": 0,
+      "end": 71,
+      "quote": "conditions: Approval witness R116 must attend the activation rehearsal.",
+      "temporal_role": "current",
+      "semantic_signature": "2d6bc0ea707df0dd05cfc5499af0fc3a9e3e35fa31160431fd4fe42e655c91d2",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f09",
+      "topic": "dependencies",
+      "required_summary": "Procurement ticket R116 requires finance concurrence. CAPABILITY_QUAL_04_DENIED",
+      "qualifiers": [
+        "R116"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-private",
+      "revision": "1",
+      "content_sha256": "7746a9d15b6a19852573731802739286f483262e550f53485ec3f1eabe6de039",
+      "start": 0,
+      "end": 93,
+      "quote": "dependencies: Procurement ticket R116 requires finance concurrence. CAPABILITY_QUAL_04_DENIED",
+      "temporal_role": "current",
+      "semantic_signature": "dea190666a6a5c45f0e1645173c825aa6fd6ddfd825b79b3939d827ddd380df1",
+      "independent_review_required": true
+    },
+    {
+      "id": "capability-qual-04-f10",
+      "topic": "exceptions",
+      "required_summary": "Only deployment ring R116 may postpone the rehearsal; customer acceptance is still required.",
+      "qualifiers": [
+        "R116",
+        "customer acceptance remains required"
+      ],
+      "critical": false,
+      "source_id": "capability-qual-04-exception",
+      "revision": "1",
+      "content_sha256": "52882cd04712c3cffbe2d22ca484c48c0a67eeb3bf9fd1cc408cacca6782ad24",
+      "start": 0,
+      "end": 104,
+      "quote": "exceptions: Only deployment ring R116 may postpone the rehearsal; customer acceptance is still required.",
+      "temporal_role": "current",
+      "semantic_signature": "1eabb00be06dfaa2e574cebfa30a1e9fc87c6e68b8d385e27ec24f763413e733",
+      "independent_review_required": true
+    }
+  ],
+  "required_event_ids": [],
+  "denied_markers": [],
+  "private_marker_sources": {
+    "CAPABILITY_QUAL_04_DENIED": "capability-qual-04-private"
+  },
+  "semantic_failures_to_review": [
+    "unrelated valid quote",
+    "missing qualifier",
+    "unsupported causality",
+    "ignored exception/dependency",
+    "unresolved contradiction",
+    "over-abstention"
+  ],
+  "provenance": {
+    "license": "MIT",
+    "authorship": "worker-authored exposed synthetic input and relationship rubric",
+    "third_party_data": false,
+    "blind_or_main_held_unseen": false,
+    "lineage_id": "u2b2-capability-qual-04",
+    "created_on": "2026-10-12",
+    "semantic_review_executed": false
+  }
+}
